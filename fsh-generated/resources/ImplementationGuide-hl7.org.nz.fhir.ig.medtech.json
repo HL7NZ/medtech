@@ -1,0 +1,98 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.org.nz.fhir.ig.medtech",
+  "url": "http://hl7.org.nz/fhir/ig/medtech/ImplementationGuide/hl7.org.nz.fhir.ig.medtech",
+  "version": "0.2.0",
+  "name": "NewZealandHPIIG",
+  "title": "New Zealand HPI IG",
+  "status": "active",
+  "publisher": "David Hay",
+  "contact": [
+    {
+      "name": "David Hay",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:david.hay25@gmail.com"
+        }
+      ]
+    }
+  ],
+  "description": "The HPI facade",
+  "packageId": "hl7.org.nz.fhir.ig.medtech",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "OperationDefinition/cfsb1610747471446"
+        },
+        "name": "cfsb1610747471446",
+        "description": "OperationDefinition1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/medTechCapabilityStatement"
+        },
+        "name": "CapabilityStatement",
+        "description": "Represents API exposed by medTech",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "capabilityStatement.html",
+          "title": "Capability Statement",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "extensions.html",
+          "title": "Extensions",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "namingSystems.html",
+          "title": "Naming Systems",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

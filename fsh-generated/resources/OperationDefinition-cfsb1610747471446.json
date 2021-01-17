@@ -1,0 +1,35 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "cfsb1610747471446",
+  "name": "PatientSummary",
+  "title": "An operation that will return a Patient Summary document",
+  "status": "draft",
+  "kind": "operation",
+  "date": "2021-01-12",
+  "code": "summary",
+  "description": "A summary",
+  "instance": true,
+  "type": false,
+  "system": false,
+  "resource": [
+    "Patient"
+  ],
+  "parameter": [
+    {
+      "name": "graph",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": ""
+    },
+    {
+      "type": "uri",
+      "searchType": "uri",
+      "name": "profile",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": ""
+    }
+  ]
+}

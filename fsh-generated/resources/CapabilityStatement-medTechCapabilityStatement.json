@@ -1,0 +1,72 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "medTechCapabilityStatement",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">medTech capabilities</div>"
+  },
+  "name": "medTech_CapabilityStatement",
+  "title": "Capability Statement describing medTech FHIR APIs",
+  "description": "This is the computable resource that describes the RESTful endpoint",
+  "date": "2020-04-01",
+  "status": "draft",
+  "kind": "instance",
+  "fhirVersion": "4.0.1",
+  "format": [
+    "json"
+  ],
+  "implementation": {
+    "description": "The medTech endpoint",
+    "url": "http://moh.org.nz/medTech/fhir"
+  },
+  "rest": [
+    {
+      "mode": "server",
+      "resource": [
+        {
+          "type": "Practitioner",
+          "supportedProfile": [
+            "http://hl7.org.nz/healthalliance/medTechPractitioner"
+          ],
+          "documentation": "Practitioner query\n",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Used to retrieve a Practitioner resource by Id."
+            },
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "name",
+              "type": "string",
+              "documentation": "Not case sensitive"
+            },
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "Will only return active identifiers"
+            },
+            {
+              "name": "family",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
