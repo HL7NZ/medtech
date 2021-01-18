@@ -1,7 +1,7 @@
 
 id: hl7.org.nz.fhir.ig.medtech
 canonical: http://hl7.org.nz/fhir/ig/medtech
-version: 0.12.0
+version: 0.1.0
 name: medtechIG
 title: medTech IG
 status: active
@@ -28,6 +28,8 @@ releaseLabel: CI Build
 menu:
   IG Home: index.html
   API: capabilityStatement.html
+  Extensions: extensions.html
+  Profiles: profiles.html
   Artifact Index: artifacts.html
   General Notes: general.html
  

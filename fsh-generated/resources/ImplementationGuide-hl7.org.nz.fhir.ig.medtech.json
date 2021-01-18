@@ -28,6 +28,46 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/mtCondition"
+        },
+        "name": "Condition profile",
+        "description": "The Condition resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/long-term-condition"
+        },
+        "name": "LongTermCondition",
+        "description": "If true, then this is a long term condition",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/LongTermCondition"
+        },
+        "name": "Search on Long term condition flag",
+        "description": "Allows the client to retrieve only the Conditions marked as 'long term'",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Condition/cfsb1610999217416"
+        },
+        "name": "cfsb1610999217416",
+        "description": "Asthma as a long term condition",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/cfsb1610999277413"
+        },
+        "name": "cfsb1610999277413",
+        "description": "Patient1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/medTechCapabilityStatement"
         },
         "name": "CapabilityStatement",

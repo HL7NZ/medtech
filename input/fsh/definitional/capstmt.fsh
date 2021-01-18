@@ -14,7 +14,16 @@ Usage: #definition
 * title = "Capability Statement describing medTech FHIR APIs"
 * url = "http://hl7.org.nz/fhir/ig/medtech"
 * description = """
-This is the computable resource that describes the RESTful endpoint exposed by the ALEX infrastructure
+This is the computable resource that describes the FHIR compliant RESTful endpoint exposed by the ALEX infrastructure
+
+Note that all API interactions will be routed to a single Practice Management System as ALEX is effectively
+a facade layer in front of each PMS - ie it is not an aggregator accross different PMS systems. This means that if
+there is data about a single patient in different PMS's tthen a call will be required to each one to retrieve all
+the data. It is the responsibility of the client to perform any aggregation and de-duplication.
+
+Refer to the spec for details on the [API](http://hl7.org/fhir/http.html) and 
+[search](http://hl7.org/fhir/search.html), though note that this API supports only a subset of the defined queries.
+
 """
 
 * date = "2020-04-01"
@@ -32,17 +41,25 @@ This is the computable resource that describes the RESTful endpoint exposed by t
 
 // ============== The Patient endpoint
 * rest.resource.type = #Patient
+* rest.resource.documentation = """
+The [Patient](http://hl7.org/fhir/patient.html) resource represents patient demographics.
 
-* rest.resource.interaction.code = #search-type
-* rest.resource.interaction.documentation = """
+Example queries:
+
+> [host]/Patient?identifier=https://standards.digital.health.nz/ns/nhi-id|WER4568
+
+> [host]/Patient?name=smith&dob=2018-12-12
 
 """
+
+* rest.resource.interaction.code = #search-type
+
 
 //read by id
 * rest.resource.interaction.code = #read
 * rest.resource.interaction.documentation = "Used to retrieve a Patient resource by Id."
 
-//Search by name. todo - may need add docs about dependencies - eg dob as well
+
 * rest.resource.searchParam.name = "name"
 * rest.resource.searchParam.type = #string
 * rest.resource.searchParam.documentation = "Not case sensitive"
@@ -55,7 +72,7 @@ This is the computable resource that describes the RESTful endpoint exposed by t
 * rest.resource.searchParam[2].type = #string
 * rest.resource.searchParam[2].documentation = "Not case sensitive"
 
-//Search by name. todo - may need add docs about dependencies - eg dob as well
+
 * rest.resource.searchParam[3].name = "identifier"
 * rest.resource.searchParam[3].type = #token
 * rest.resource.searchParam[3].documentation = "If the system is not supplied, then the NHI is assumed"
@@ -69,6 +86,8 @@ as the query parameter - eg
 
 [host]/Patient/$summary?identifier=https://standards.digital.health.nz/ns/nhi-id|WER4568
 
+The system value should be included, though the NHI will be assumed if it is absent.
+
 """
 
 
@@ -76,11 +95,14 @@ as the query parameter - eg
 * rest.resource[1].type = #Condition
 * rest.resource[1].documentation = """
 
+The [Condition](http://hl7.org/fhir/condition.html) resource is used to represent patient problems
+
 """
 
 * rest.resource[1].interaction.code = #search-type
 * rest.resource[1].interaction.documentation = """
 
+how to do 'since'
 """
 
 //read by id

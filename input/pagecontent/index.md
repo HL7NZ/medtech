@@ -16,15 +16,15 @@ The patient summary can be requested at any time, but always represents a comple
 
 These are the resource specific endpoints that can be used to retrieve specific resources. Currently, these are all read-only API's and can be used to retrieve the matching resources - often since some particular date. These all use a [parameterized data search](http://hl7.org/fhir/search.html#date).
 
-Resources that are supported are:
+Resources that are supported through the API are:
 
-* [Patient](http://hl7.org/fhir/patient.html)
-* [Condition](http://hl7.org/fhir/condition.html)
-* [AllergyIntolerance](http://hl7.org/fhir/allergyintolerance.html)
-* [Observation](http://hl7.org/fhir/observation.html)
-* [Encounter](http://hl7.org/fhir/encounter.html)
-* [Immunization](http://hl7.org/fhir/immunization.html)
-* [DocumentReference](http://hl7.org/fhir/documentreference.html)
+* [Patient](capabilityStatement.html#patient) 
+* [Condition](capabilityStatement.html#condition) 
+* [AllergyIntolerance](capabilityStatement.html#allergyintolerance)
+* [Observation](capabilityStatement.html#observation)
+* [Encounter](capabilityStatement.html#encounter)
+* [Immunization](capabilityStatement.html#immunization)
+* [DocumentReference](capabilityStatement.html#documentreference)
 
 
 ### Appointment interaction.
