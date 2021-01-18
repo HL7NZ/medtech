@@ -17,28 +17,275 @@
   },
   "name": "medTech_CapabilityStatement",
   "title": "Capability Statement describing medTech FHIR APIs",
-  "description": "This is the computable resource that describes the RESTful endpoint",
+  "url": "http://hl7.org.nz/fhir/ig/medtech",
+  "description": "This is the computable resource that describes the RESTful endpoint exposed by the ALEX infrastructure",
   "date": "2020-04-01",
   "status": "draft",
   "kind": "instance",
   "fhirVersion": "4.0.1",
   "format": [
-    "json"
+    "json",
+    "xml"
   ],
   "implementation": {
     "description": "The medTech endpoint",
-    "url": "http://moh.org.nz/medTech/fhir"
+    "url": "https://medtech.com/alex"
   },
   "rest": [
     {
       "mode": "server",
       "resource": [
         {
-          "type": "Practitioner",
-          "supportedProfile": [
-            "http://hl7.org.nz/healthalliance/medTechPractitioner"
+          "type": "Patient",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Used to retrieve a Patient resource by Id."
+            }
           ],
-          "documentation": "Practitioner query\n",
+          "searchParam": [
+            {
+              "name": "name",
+              "type": "string",
+              "documentation": "Not case sensitive"
+            },
+            {
+              "name": "family",
+              "type": "string",
+              "documentation": "Not case sensitive"
+            },
+            {
+              "name": "birthDate",
+              "type": "string",
+              "documentation": "Not case sensitive"
+            },
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "If the system is not supplied, then the NHI is assumed"
+            }
+          ],
+          "operation": [
+            {
+              "name": "summary",
+              "definition": "http://hl7.org/fhir/OperationDefinition/Patient-summary",
+              "documentation": "Returns the IPS document for the patient. Only supported as a parameter against patient, using the NHI\nas the query parameter - eg\n\n[host]/Patient/$summary?identifier=https://standards.digital.health.nz/ns/nhi-id|WER4568\n"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "documentation": "",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Condition?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the Condition identifier is NOT supported"
+            },
+            {
+              "name": "clinical-status",
+              "type": "token",
+              "documentation": "The clinical status of the Condition. Only 'active' or 'inactive' values are supported"
+            },
+            {
+              "name": "long-term-condition",
+              "type": "token",
+              "definition": "http://hl7.org.nz/fhir/SearchParameter/long-term-condition",
+              "documentation": "Whether the Condition has been marked by the Practitioner as a long term one. This is indicated\nin the resource as an extension."
+            }
+          ]
+        },
+        {
+          "type": "MedicationStatement",
+          "documentation": "\n",
+          "interaction": [
+            {
+              "code": "read"
+            }
+          ]
+        },
+        {
+          "type": "Observation",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Condition?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the Observation identifier is NOT supported"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The API also supports searching by date range - ge (Greater than or equal to)\nand le (less than or equal to)"
+            }
+          ]
+        },
+        {
+          "type": "Encounter",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Condition?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the Observation identifier is NOT supported"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The API also supports searching by date range - ge (Greater than or equal to)\nand le (less than or equal to)"
+            }
+          ]
+        },
+        {
+          "type": "Immunization",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Condition?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the Observation identifier is NOT supported"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The API also supports searching by date range - ge (Greater than or equal to)\nand le (less than or equal to)"
+            }
+          ]
+        },
+        {
+          "type": "DiagnosticReport",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": "The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same\ncall"
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Condition?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the Observation identifier is NOT supported"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "The API also supports searching by date range - ge (Greater than or equal to)\nand le (less than or equal to)"
+            }
+          ],
+          "searchInclude": [
+            "result"
+          ]
+        },
+        {
+          "type": "AllergyIntolerance",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Condition?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the Condition identifier is NOT supported"
+            },
+            {
+              "name": "clinical-status",
+              "type": "token",
+              "documentation": "The clinical status of the Condition. Only 'active' or 'inactive' values are supported"
+            }
+          ]
+        },
+        {
+          "type": "Schedule",
+          "documentation": "Represents a schedule of appointment slots (eg the slots for a morning session).\nThis endpoint may noyt be supported",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ]
+        },
+        {
+          "type": "Slot",
+          "documentation": "Represents a single possible appointment slot that is available for booking.\n",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "schedule",
+              "type": "reference",
+              "documentation": "Used to allow the practitioner to be specified in the query using a chained request:\n\n[host]/Slot?schedule.practitioner.identifer = {}"
+            },
+            {
+              "name": "start",
+              "type": "token",
+              "documentation": "Allows the user to specify the date for which available slots are to be returned. A range can be\nspecified using the greater than / less than modifiers"
+            },
+            {
+              "name": "status",
+              "type": "token",
+              "documentation": "Allows the user to specify the status of the slot to be specified in the query. Generally this will \nbe set to 'free' to return only available slots."
+            }
+          ]
+        },
+        {
+          "type": "Appointment",
+          "documentation": "Represents an appointment for a Patient with a Practitioner.",
+          "searchParam": [
+            {
+              "name": "patient",
+              "type": "reference",
+              "documentation": "Return all appointments for a patient"
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "documentation": "Return all appointments over a date range (using ge / le modifiers). The patient must also be included."
+            }
+          ],
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": "Allows appointments to be queried. Note that the are security / privacy constraints that will\ngovern which appointments can be returned to which client."
+            },
+            {
+              "code": "create",
+              "documentation": "Allows a new appointment to be created. The server may choose not to allow the Appointment to be\nmade - for example if the slot is no longer available."
+            },
+            {
+              "code": "delete",
+              "documentation": "Allows an existing appointment to be removed. The Appointment id must be known, so a client will generally\nneed to search for appointments for a patient to get the id before deleting.\n\nThere will be security mechanisms to ensure that deletion is controlled."
+            }
+          ]
+        },
+        {
           "interaction": [
             {
               "code": "read",
@@ -49,6 +296,11 @@
               "documentation": ""
             }
           ],
+          "type": "Practitioner",
+          "supportedProfile": [
+            "http://hl7.org.nz/healthalliance/medTechPractitioner"
+          ],
+          "documentation": "Practitioner query\n",
           "searchParam": [
             {
               "name": "name",

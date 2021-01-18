@@ -2,9 +2,9 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.org.nz.fhir.ig.medtech",
   "url": "http://hl7.org.nz/fhir/ig/medtech/ImplementationGuide/hl7.org.nz.fhir.ig.medtech",
-  "version": "0.2.0",
-  "name": "NewZealandHPIIG",
-  "title": "New Zealand HPI IG",
+  "version": "0.12.0",
+  "name": "medtechIG",
+  "title": "medTech IG",
   "status": "active",
   "publisher": "David Hay",
   "contact": [
@@ -28,19 +28,19 @@
     "resource": [
       {
         "reference": {
-          "reference": "OperationDefinition/cfsb1610747471446"
-        },
-        "name": "cfsb1610747471446",
-        "description": "OperationDefinition1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "CapabilityStatement/medTechCapabilityStatement"
         },
         "name": "CapabilityStatement",
         "description": "Represents API exposed by medTech",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/summary"
+        },
+        "name": "summary",
+        "description": "OperationDefinition1",
+        "exampleBoolean": true
       }
     ],
     "page": {
@@ -64,6 +64,11 @@
           "generation": "html"
         },
         {
+          "nameUrl": "general.html",
+          "title": "General",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "namingSystems.html",
           "title": "Naming Systems",
           "generation": "markdown"
@@ -83,7 +88,7 @@
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "2020+"
+        "value": "2021+"
       },
       {
         "code": "releaselabel",
