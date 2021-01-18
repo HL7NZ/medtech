@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "long-term-condition",
   "url": "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition",
-  "version": "0.12.0",
+  "version": "0.1.0",
   "name": "LongTermCondition",
   "status": "active",
   "description": "If true, then this is a long term condition",
@@ -38,23 +38,23 @@
   "differential": {
     "element": [
       {
-        "id": "Extension.extension.extension",
-        "path": "Extension.extension.extension",
+        "id": "Extension.extension",
+        "path": "Extension.extension",
         "max": "0"
-      },
-      {
-        "id": "Extension.extension.value[x]",
-        "path": "Extension.extension.value[x]",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
       },
       {
         "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
       }
     ]
   }

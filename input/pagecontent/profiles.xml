@@ -4,8 +4,18 @@
 <table class='table table-bordered table-hover table-sm'>
 <tr><th>Id</th><th>Url</th><th>Description</th></tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtCondition.html'>mtCondition</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtCondition.html'>mtCondition</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtCondition</td>
+<td>The Condition resource exposed by the ALEX infrastructure.</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtPatient.html'>mtPatient</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/mtPatient</td>
+<td>The Patient resource exposed by the ALEX infrastructure.</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtScreening-observation.html'>mtScreening-observation</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/mtScreening-observation</td>
 <td>The Condition resource exposed by the ALEX infrastructure.</td>
 </tr>
 </table>

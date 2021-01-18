@@ -3,12 +3,20 @@
 <table width='100%' border='1' cellspacing='0' cellpadding='5px'>
 <tr><th>Id</th><th>Url</th><th>Context of Use</th><th>Description</th></tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-long-term-condition.html'>long-term-condition</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-long-term-condition.html'>long-term-condition</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/long-term-condition</td>
 <td>
 <div>Condition</div>
 </td>
 <td>If true, then this is a long term condition</td>
+</tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-patient-enrolment.html'>patient-enrolment</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/patient-enrolment</td>
+<td>
+<div>Patient</div>
+</td>
+<td>Additional authorizations that a practitioner is authorized to perform</td>
 </tr>
 </table>
 <a name="externalExtensions"> </a>

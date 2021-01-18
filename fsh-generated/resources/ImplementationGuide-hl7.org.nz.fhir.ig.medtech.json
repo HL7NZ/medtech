@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.org.nz.fhir.ig.medtech",
   "url": "http://hl7.org.nz/fhir/ig/medtech/ImplementationGuide/hl7.org.nz.fhir.ig.medtech",
-  "version": "0.12.0",
+  "version": "0.1.0",
   "name": "medtechIG",
   "title": "medTech IG",
   "status": "active",
@@ -36,10 +36,34 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mtPatient"
+        },
+        "name": "Patient profile",
+        "description": "The Patient resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mtScreening-observation"
+        },
+        "name": "Condition profile",
+        "description": "The Condition resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/long-term-condition"
         },
         "name": "LongTermCondition",
         "description": "If true, then this is a long term condition",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/patient-enrolment"
+        },
+        "name": "PatientEnrolment",
+        "description": "Additional authorizations that a practitioner is authorized to perform",
         "exampleBoolean": false
       },
       {
@@ -64,7 +88,7 @@
         },
         "name": "cfsb1610999277413",
         "description": "Patient1",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/mtPatient"
       },
       {
         "reference": {

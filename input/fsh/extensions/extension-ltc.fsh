@@ -8,6 +8,6 @@ Description: "If true, then this is a long term condition"
 * ^context.type = #element
 * ^context.expression = "Condition"
 
-* extension.value[x] only boolean
+* value[x] only boolean
 
 
