@@ -11,9 +11,6 @@ publisher:
 description: The HPI facade
 license: CC0-1.0
 fhirVersion: 4.0.1
-# there is a dependency on the NHI to get address profile
-# dependencies:
-#  hl7.org.nz.fhir.ig.nhi: current
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2021+
@@ -30,9 +27,10 @@ releaseLabel: CI Build
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
+  API: capabilityStatement.html
   Artifact Index: artifacts.html
   General Notes: general.html
-  API: capabilityStatement.html
+ 
 
   Support:
     "FHIR Spec ": "{{site.data.fhir.path}}index.html"

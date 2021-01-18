@@ -14,13 +14,13 @@
     <a href="index.html">IG Home</a>
   </li>
   <li>
+    <a href="capabilityStatement.html">API</a>
+  </li>
+  <li>
     <a href="artifacts.html">Artifact Index</a>
   </li>
   <li>
     <a href="general.html">General Notes</a>
-  </li>
-  <li>
-    <a href="capabilityStatement.html">API</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support

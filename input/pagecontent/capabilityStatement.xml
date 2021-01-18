@@ -81,6 +81,9 @@ in the resource as an extension.</td>
 </table>
 <a name="MedicationStatement"> </a>
 <h3>MedicationStatement</h3>
+<div>
+</div>
+<br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
@@ -265,6 +268,9 @@ A query on the Condition identifier is NOT supported</td>
 </table>
 <a name="Schedule"> </a>
 <h3>Schedule</h3>
+<div>Represents a schedule of appointment slots (eg the slots for a morning session).
+This endpoint may noyt be supported</div>
+<br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
@@ -275,6 +281,9 @@ A query on the Condition identifier is NOT supported</td>
 </table>
 <a name="Slot"> </a>
 <h3>Slot</h3>
+<div>Represents a single possible appointment slot that is available for booking.
+</div>
+<br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
@@ -311,6 +320,8 @@ be set to 'free' to return only available slots.</td>
 </table>
 <a name="Appointment"> </a>
 <h3>Appointment</h3>
+<div>Represents an appointment for a Patient with a Practitioner.</div>
+<br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
@@ -348,8 +359,46 @@ There will be security mechanisms to ensure that deletion is controlled.</td>
 <td>Return all appointments over a date range (using ge / le modifiers). The patient must also be included.</td>
 </tr>
 </table>
+<a name="DocumentReference"> </a>
+<h3>DocumentReference</h3>
+<div>Used to represent clincial notes and external documents such as Discharge Summaries. For a clincial note, the note will be 
+in the content.attachment.data element. For external files the url will be a reference to a Binary endpoint from where the
+document can be retrieved.</div>
+<br></br>
+<strong>Interactions</strong>
+<table class='table table-bordered table-condensed'>
+<tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
+<tr>
+<td>search-type</td>
+<td></td>
+</tr>
+</table>
+<strong>Search Parameters</strong>
+<table class='table table-bordered table-condensed'>
+<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr>
+<td>identifier</td>
+<td>token</td>
+<td></td>
+<td>The API supports a chained query on the patient identifier (NHI) 
+This has the syntax:
+[host]/DocumentReference?patient.identifier={system|value}
+
+If the system is absent, the NHI is assumed
+
+A query on the DocumentReference identifier is NOT supported</td>
+</tr>
+</table>
+<a name="Binary"> </a>
+<h3>Binary</h3>
+<div>Used to return documents such as PDF files. Generally in response to a url contained in a DocumentReference
+that refers to a discharge summary or other external document.</div>
+<br></br>
 <a name="Practitioner"> </a>
 <h3>Practitioner</h3>
+<div>Practitioner query
+</div>
+<br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>

@@ -112,6 +112,7 @@
         },
         {
           "type": "Observation",
+          "documentation": "Observations are used in 2 main ways: as the details for lab results (such as a haemoglobin result)\nand for screening data.\n",
           "interaction": [
             {
               "code": "search-type",
@@ -284,6 +285,27 @@
               "documentation": "Allows an existing appointment to be removed. The Appointment id must be known, so a client will generally\nneed to search for appointments for a patient to get the id before deleting.\n\nThere will be security mechanisms to ensure that deletion is controlled."
             }
           ]
+        },
+        {
+          "type": "DocumentReference",
+          "documentation": "Used to represent clincial notes and external documents such as Discharge Summaries. For a clincial note, the note will be \nin the content.attachment.data element. For external files the url will be a reference to a Binary endpoint from where the\ndocument can be retrieved.",
+          "interaction": [
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/DocumentReference?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the DocumentReference identifier is NOT supported"
+            }
+          ]
+        },
+        {
+          "type": "Binary",
+          "documentation": "Used to return documents such as PDF files. Generally in response to a url contained in a DocumentReference\nthat refers to a discharge summary or other external document."
         },
         {
           "interaction": [

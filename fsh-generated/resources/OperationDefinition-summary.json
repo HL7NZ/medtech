@@ -1,0 +1,37 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "summary",
+  "name": "PatientSummary",
+  "url": "http://hl7.org/fhir/OperationDefinition/Patient-summary",
+  "title": "An operation that will return a Patient Summary document",
+  "status": "draft",
+  "kind": "operation",
+  "date": "2021-01-12",
+  "code": "summary",
+  "description": "The summary operation asks the server to return the latest appropriate summary for the patient. \nThe patient is either\n\n* explicitly identified by the id of the patient resource\n* implicitly identified as the only patient in scope due to security/context\n* specified by other additional (unspecified here) parameters (or do we specify the identifier parameter?)\n\nThis operation returns a bundle (type = document) for single patient.\n\nThe operation asks for the latest appropriate summary, whether that already exists, \nor must be newly generated. Unless otherwise specified, the server has discretion to \nchoose how to fulfill the request. We anticipate that there will be a profusion of \nbusiness practices around currency/attestation, and therefore variance in parameters around that. \nIf some consistency emerges, HL7 would consider adding additional parameters to the base definition",
+  "comment": "This Operation Definition is proposed as an HL7 one, based on the needs of this (and other) Implementation Guides\nWe anticipate that there will be a profusion of business practices around currency/attestation, and therefore variance in parameters around that. If some consistency emerges, HL7 would consider adding additional parameters to the base definition\n\n\n\nIPS will define a profile on Bundle with the URL in the example above, so that an IPS can be reqested. In the absence of a profile parameter, server has discretion to construct/return a summary of it's choice\n",
+  "instance": true,
+  "type": false,
+  "system": false,
+  "resource": [
+    "Patient"
+  ],
+  "parameter": [
+    {
+      "name": "graph",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": ""
+    },
+    {
+      "type": "uri",
+      "searchType": "uri",
+      "name": "profile",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": ""
+    }
+  ]
+}

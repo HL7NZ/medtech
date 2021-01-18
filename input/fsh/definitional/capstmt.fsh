@@ -126,6 +126,11 @@ in the resource as an extension.
 
 // ============== The Observation endpoint
 * rest.resource[3].type = #Observation
+* rest.resource[3].documentation = """
+Observations are used in 2 main ways: as the details for lab results (such as a haemoglobin result)
+and for screening data.
+
+"""
 
 * rest.resource[3].interaction.code = #search-type
 * rest.resource[3].interaction.documentation = """
@@ -378,44 +383,74 @@ need to search for appointments for a patient to get the id before deleting.
 There will be security mechanisms to ensure that deletion is controlled.
 """
 
-
-
-// ============== The Practitioner endpoint
+// ============== The DocumentReference endpoint
+* rest.resource[11].type = #DocumentReference
+* rest.resource[11].documentation = """
+Used to represent clincial notes and external documents such as Discharge Summaries. For a clincial note, the note will be 
+in the content.attachment.data element. For external files the url will be a reference to a Binary endpoint from where the
+document can be retrieved.
+"""
 
 * rest.resource[11].interaction.code = #search-type
 * rest.resource[11].interaction.documentation = """
 
 """
+//read by NHI
+* rest.resource[11].searchParam.name = "identifier"
+* rest.resource[11].searchParam.type = #token
+* rest.resource[11].searchParam.documentation = """
+The API supports a chained query on the patient identifier (NHI) 
+This has the syntax:
+[host]/DocumentReference?patient.identifier={system|value}
+
+If the system is absent, the NHI is assumed
+
+A query on the DocumentReference identifier is NOT supported
+"""
+
+//============= The Binary endpoint
+* rest.resource[12].type = #Binary
+* rest.resource[12].documentation = """
+Used to return documents such as PDF files. Generally in response to a url contained in a DocumentReference
+that refers to a discharge summary or other external document.
+"""
+
+// ============== The Practitioner endpoint
+
+* rest.resource[13].interaction.code = #search-type
+* rest.resource[13].interaction.documentation = """
+
+"""
 
 
-* rest.resource[11].type = #Practitioner
-* rest.resource[11].supportedProfile = "http://hl7.org.nz/healthalliance/medTechPractitioner"
-* rest.resource[11].documentation = """
+* rest.resource[13].type = #Practitioner
+* rest.resource[13].supportedProfile = "http://hl7.org.nz/healthalliance/medTechPractitioner"
+* rest.resource[13].documentation = """
 Practitioner query
 
 """
 
 //read by id
-* rest.resource[11].interaction.code = #read
-* rest.resource[11].interaction.documentation = "Used to retrieve a Practitioner resource by Id."
+* rest.resource[13].interaction.code = #read
+* rest.resource[13].interaction.documentation = "Used to retrieve a Practitioner resource by Id."
 
 //search by various parameters
-* rest.resource[11].interaction[1].code = #search-type
-* rest.resource[11].interaction[1].documentation = ""
+* rest.resource[13].interaction[1].code = #search-type
+* rest.resource[13].interaction[1].documentation = ""
 
 //Search by name. todo - may need add docs about dependencies - eg dob as well
-* rest.resource[11].searchParam.name = "name"
-* rest.resource[11].searchParam.type = #string
-* rest.resource[11].searchParam.documentation = "Not case sensitive"
+* rest.resource[13].searchParam.name = "name"
+* rest.resource[13].searchParam.type = #string
+* rest.resource[13].searchParam.documentation = "Not case sensitive"
 
 //identifier 
-* rest.resource[11].searchParam[1].name = "identifier"
-* rest.resource[11].searchParam[1].type = #token
-* rest.resource[11].searchParam[1].documentation = "Will only return active identifiers"
+* rest.resource[13].searchParam[1].name = "identifier"
+* rest.resource[13].searchParam[1].type = #token
+* rest.resource[13].searchParam[1].documentation = "Will only return active identifiers"
 
 //family 
-* rest.resource[11].searchParam[2].name = "family"
-* rest.resource[11].searchParam[2].type = #string
+* rest.resource[13].searchParam[2].name = "family"
+* rest.resource[13].searchParam[2].type = #string
 //* rest.resource.searchParam[2].documentation = ""
 
 
