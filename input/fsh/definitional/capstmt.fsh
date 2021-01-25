@@ -60,9 +60,9 @@ Example queries:
 * rest.resource.interaction.documentation = "Used to retrieve a Patient resource by Id."
 
 
-* rest.resource.searchParam.name = "name"
+* rest.resource.searchParam.name = "namex"
 * rest.resource.searchParam.type = #string
-* rest.resource.searchParam.documentation = "Not case sensitive"
+* rest.resource.searchParam.documentation = "> [host]/Patient?name='doe'"
 
 * rest.resource.searchParam[1].name = "family"
 * rest.resource.searchParam[1].type = #string
@@ -106,7 +106,7 @@ how to do 'since'
 """
 
 //read by id
-* rest.resource[1].interaction.code = #read
+* rest.resource[1].interaction.code = #read //[host]/Condition/{id}  [host]/Condition?_id={id}
 
 //read by NHI
 * rest.resource[1].searchParam.name = "identifier"
@@ -118,7 +118,12 @@ This has the syntax:
 
 If the system is absent, the NHI is assumed
 
+check syntax for search by patient.id
+
 A query on the Condition identifier is NOT supported
+
+
+
 """
 
 * rest.resource[1].searchParam[1].name = "clinical-status"

@@ -1,4 +1,5 @@
 Alias: $ltc = http://hl7.org.nz/fhir/StructureDefinition/long-term-condition
+Alias: $highlight = http://hl7.org.nz/fhir/StructureDefinition/highlight-condition
 
 Profile:        MtCondition
 Parent:         Condition
@@ -33,4 +34,5 @@ Description:    "The Condition resource exposed by the ALEX infrastructure."
 * recorder 1..1
 
 * extension contains
-    $ltc named long-term-condition 0..1
+    $ltc named long-term-condition 0..1 and
+    $highlight named highlight 0..1

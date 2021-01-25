@@ -1,0 +1,10 @@
+{
+  "resourceType": "Slot",
+  "id": "slot1",
+  "schedule": {
+    "reference": "Schedule/sched1"
+  },
+  "status": "free",
+  "start": "2020-01-08T10:00:00Z",
+  "end": "2020-01-08T10:15:00Z"
+}

@@ -1,0 +1,10 @@
+{
+  "resourceType": "Practitioner",
+  "id": "prov1",
+  "identifier": [
+    {
+      "system": "http://clinfhir.com",
+      "value": "abc"
+    }
+  ]
+}

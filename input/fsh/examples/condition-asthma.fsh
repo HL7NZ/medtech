@@ -10,6 +10,9 @@ Usage: #example
 * extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition"
 * extension[0].valueBoolean = true
 
+* extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/highlight"
+* extension[0].valueBoolean = true
+
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
 * code = http://snomed.info/sct#195967001 "Asthma"
 * severity = http://snomed.info/sct#255604002 "Mild"

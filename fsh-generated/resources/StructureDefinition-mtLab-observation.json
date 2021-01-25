@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mtScreening-observation",
+  "id": "mtLab-observation",
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Screening data</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lab data</div>"
   },
   "extension": [
     {
@@ -15,12 +15,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://hl7.org.nz/fhir/StructureDefinition/mtScreening-observation",
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/mtLab-observation",
   "version": "0.1.0",
-  "name": "MtScreeningObservation",
-  "title": "Screening Observation profile",
+  "name": "MtLabObservation",
+  "title": "Lab result Observation profile",
   "status": "active",
-  "description": "The Observation to use when exposing screening data",
+  "description": "The Observation to use when exposing laboratory data",
   "jurisdiction": [
     {
       "coding": [
@@ -31,7 +31,7 @@
       ]
     }
   ],
-  "purpose": "The Observation to use when exposing screening data",
+  "purpose": "The Observation to use when exposing lab data",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

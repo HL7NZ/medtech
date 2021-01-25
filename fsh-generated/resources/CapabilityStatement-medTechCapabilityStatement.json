@@ -46,9 +46,9 @@
           ],
           "searchParam": [
             {
-              "name": "name",
+              "name": "namex",
               "type": "string",
-              "documentation": "Not case sensitive"
+              "documentation": "> [host]/Patient?name='doe'"
             },
             {
               "name": "family",
@@ -87,7 +87,7 @@
             {
               "name": "identifier",
               "type": "token",
-              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Condition?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the Condition identifier is NOT supported"
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Condition?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\ncheck syntax for search by patient.id\n\nA query on the Condition identifier is NOT supported\n\n\n"
             },
             {
               "name": "clinical-status",

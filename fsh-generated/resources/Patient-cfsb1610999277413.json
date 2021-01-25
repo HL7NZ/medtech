@@ -48,5 +48,11 @@
     }
   ],
   "gender": "male",
-  "birthDate": "1989-01-18"
+  "birthDate": "1989-01-18",
+  "identifier": [
+    {
+      "system": "https://standards.digital.health.nz/ns/nhi-id",
+      "value": "ABC1234"
+    }
+  ]
 }

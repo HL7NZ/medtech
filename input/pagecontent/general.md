@@ -31,7 +31,7 @@ This is generally performed in 2 stages.
 First the client determines which appointment slots are available to be booked. This is done by
 a query against the [Slot](http://hl7.org/fhir/slot.html) endpoint, using a chained parameter on schedule to indicate the Practitioner desired. For example
 
-> GET [host]/Slot?schedule.practitioner.identifier={}&date=ge{date}&date=le{date}&status=free
+> GET [host]/Slot?schedule:actor.identifier={}&date=ge{date}&date=le{date}&status=free
 
 Note that not including the status parameter would result in all slots over the period being returned, which is generally not desired.
 
@@ -51,7 +51,7 @@ Laboratory information is held in 2 resources:
 
 To retrieve lab data, make a query against DiagnosticReport including the _include parameter to include the Observation in the resulting Bundle. eg
 
-> [host]/DiagnosticReport?patient.idenifier = {nhi}&_include = result
+> [host]/DiagnosticReport?patient.identifier = {nhi}&_include = result
 
 (This also uses a chained identifier parameter on Patient to avoid needing the Patient id)
 

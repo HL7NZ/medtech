@@ -10,6 +10,9 @@ Usage: #example
 * gender = #male
 * birthDate = "1989-01-18"
 
+* identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier.value = "ABC1234"
+
 //enrolled from 2020 5to 2022
 * extension[enrolment].extension[period].valuePeriod.start = "2020-01-01"
 * extension[enrolment].extension[period].valuePeriod.end = "2022-01-01"

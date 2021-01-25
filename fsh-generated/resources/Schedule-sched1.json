@@ -1,0 +1,13 @@
+{
+  "resourceType": "Schedule",
+  "id": "sched1",
+  "actor": [
+    {
+      "reference": "Practitioner/prov1"
+    }
+  ],
+  "planningHorizon": {
+    "start": "2020-01-08T09:00:00Z",
+    "end": "2020-01-08T12:00:00Z"
+  }
+}

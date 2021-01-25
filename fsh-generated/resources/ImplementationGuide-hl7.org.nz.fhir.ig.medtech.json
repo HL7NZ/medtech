@@ -36,6 +36,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mtImmunization"
+        },
+        "name": "Immunization profile",
+        "description": "The Immunization resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mtLab-observation"
+        },
+        "name": "Lab result Observation profile",
+        "description": "The Observation to use when exposing laboratory data",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mtPatient"
         },
         "name": "Patient profile",
@@ -46,8 +62,16 @@
         "reference": {
           "reference": "StructureDefinition/mtScreening-observation"
         },
-        "name": "Condition profile",
-        "description": "The Condition resource exposed by the ALEX infrastructure.",
+        "name": "Screening Observation profile",
+        "description": "The Observation to use when exposing screening data",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/highlight-condition"
+        },
+        "name": "HighlightCondition",
+        "description": "If true, then this is a long term condition",
         "exampleBoolean": false
       },
       {
@@ -97,6 +121,38 @@
         "name": "CapabilityStatement",
         "description": "Represents API exposed by medTech",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/prov1"
+        },
+        "name": "prov1",
+        "description": "Provider 1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Schedule/sched1"
+        },
+        "name": "sched1",
+        "description": "Schedule1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Slot/slot1"
+        },
+        "name": "slot1",
+        "description": "Slot1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Slot/slot2"
+        },
+        "name": "slot2",
+        "description": "Slot1",
+        "exampleBoolean": true
       },
       {
         "reference": {

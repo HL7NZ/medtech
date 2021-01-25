@@ -102,6 +102,21 @@
         ]
       },
       {
+        "id": "Condition.extension:highlight",
+        "path": "Condition.extension",
+        "sliceName": "highlight",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/highlight-condition"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Condition.identifier",
         "path": "Condition.identifier",
         "max": "0"

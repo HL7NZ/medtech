@@ -34,10 +34,12 @@ the data. It is the responsibility of the client to perform any aggregation and 
 <table class='table table-bordered table-condensed'>
 <tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>name</td>
+<td>namex</td>
 <td>string</td>
 <td></td>
-<td><p>Not case sensitive</p>
+<td><blockquote>
+<p>[host]/Patient?name='doe'</p>
+</blockquote>
 </td>
 </tr>
 <tr>
@@ -87,6 +89,7 @@ the data. It is the responsibility of the client to perform any aggregation and 
 This has the syntax:
 [host]/Condition?patient.identifier={system|value}</p>
 <p>If the system is absent, the NHI is assumed</p>
+<p>check syntax for search by patient.id</p>
 <p>A query on the Condition identifier is NOT supported</p>
 </td>
 </tr>
