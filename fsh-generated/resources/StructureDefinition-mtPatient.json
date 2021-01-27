@@ -97,6 +97,11 @@
         ]
       },
       {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1
+      },
+      {
         "id": "Patient.photo",
         "path": "Patient.photo",
         "max": "0"

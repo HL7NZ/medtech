@@ -14,6 +14,6 @@ Usage: #definition
 
 * status = #draft
 * description = "Allows the client to retrieve only the Conditions marked as 'long term'"
-* code = #ltc
+* code = #long-term-condition
 * base = #Condition
 * type = #token

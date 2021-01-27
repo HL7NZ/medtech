@@ -2,6 +2,8 @@ Describes the API exposed by Medtech on behalf of their Primary Care systems.
 
 There are 3 main parts to  the API.
 
+(updated wednesday)
+
 ### Patient Summary
 
 A custom operation (that may become a standard) that is applied to a patient that will generate a FHIR document that is a summary of the patients status at that point in time. This summary is compliant with the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/index.html) Implementation Guide, but adds a number of additional resources - Encounter and DocumentReference to the set defined in the IPS.

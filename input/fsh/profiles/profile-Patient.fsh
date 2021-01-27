@@ -17,5 +17,10 @@ Description:    "The Patient resource exposed by the ALEX infrastructure."
 //elements not supported
 * photo 0..0
 
+//elements supported (for Gordon)
+* name 1..*
+* name.family 0..1
+
+//enrolment extension
 * extension contains
     $enrolment named enrolment 0..1
