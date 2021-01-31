@@ -18,18 +18,18 @@ echo "Creating Profiles and extensions summary pages..."
 ../scripts/makeProfilesAndExtensions.js medtech
 
 echo "Making terminology summary"  
-../scripts/makeTerminologySummary.js medtech
+# temp ../scripts/makeTerminologySummary.js medtech
 
 echo "Making API summary"
-../scripts/makeCapabilityStatement.js medtech
+# temp ../scripts/makeCapabilityStatement.js medtech
 
 echo "Making NamingSystem summary"
-../scripts/makeNamingSystemSummary.js medtech
+# temp ../scripts/makeNamingSystemSummary.js medtech
 
 
 else 
 echo
 echo
-echo "There were errors so oyjer scripts not run"
+echo "There were errors so other scripts not run"
 fi
 
