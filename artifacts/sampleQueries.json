@@ -10,6 +10,27 @@
     {"type":"Condition","examples":[
         {"qry":"?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
             "doc" : "Retrieve all the conditions for a patient with the NHI number ABC2345"
+        },
+        {"qry":"?patient._id = XXX",
+            "doc" : "Retrieve all the conditions for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
+        },
+        {"qry":"/{id}",
+            "doc" : "Retrieve a single condition with a known id. "
+        },
+        {"qry":"?_id = YYY",
+            "doc" : "Retrieve a single condition with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
+        },
+        {"qry":" https://[base]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&long-term-condition=true",
+            "doc" : "Return conditions marked as 'long term' within medTech"
+        },
+        {"qry":" https://[base]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinicalStatus=inactive",
+            "doc" : "Returns conditions that are marked as inactive. Generally, inactive conditions are not returned in a query"
+        },
+        {"qry":"https://[base]/Condition?patient.identifier=ABC2356&_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
+            "doc" : "Returns coonditions that are marmed as cpnfindential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information"
+        },
+        {"qry":"",
+            "doc" : " "
         }
     ]}
    
