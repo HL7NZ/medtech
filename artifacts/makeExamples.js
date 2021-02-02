@@ -37,6 +37,7 @@ ex.forEach(function(examples){
     //console.log('--',examples)
     let type = examples.type
 
+    ar.push('<a name=resource"+type+"> </a>')   
     ar.push("<h3>"+type+"</h3>")
 
     //ar.push("<br/><strong>Type:"+type+"</strong><br/><br/>")
