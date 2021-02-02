@@ -44,9 +44,12 @@ ex.forEach(function(examples){
 
     examples.examples.forEach(function(query) {
 
-        ar.push("<div>"+query.doc+"</div>")
+        let q = '[host]/' + type + query.qry
+        ar.push("<div>"+ q +"</div>")
 
-        ar.push("<div><em>"+query.qry+"</em></div>")
+        ar.push("<div><em>"+query.doc+"</em></div>")
+
+
       
         ar.push("<br/>")
        
