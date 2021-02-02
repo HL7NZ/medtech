@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "name": "HighlightCondition",
   "status": "active",
-  "description": "If true, then this is a long term condition",
+  "description": "If true, then this is a condition that has been highlighted in the PMS",
   "jurisdiction": [
     {
       "coding": [
@@ -40,7 +40,7 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "definition": "If true, then this is a long term condition"
+        "definition": "If true, then this is a condition that has been highlighted in the PMS"
       },
       {
         "id": "Extension.extension",

@@ -28,6 +28,7 @@ releaseLabel: CI Build
 menu:
   IG Home: index.html
   API: capabilityStatement.html
+  Example queries: exampleQueries.html
   Extensions: extensions.html
   Profiles: profiles.html
   Artifact Index: artifacts.html

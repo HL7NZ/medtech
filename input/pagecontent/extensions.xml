@@ -8,7 +8,7 @@
 <td>
 <div>Condition</div>
 </td>
-<td>If true, then this is a long term condition</td>
+<td>If true, then this is a condition that has been highlighted in the PMS</td>
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-long-term-condition.html'>long-term-condition</a></td>

@@ -1,0 +1,16 @@
+[
+    {"type" : "Patient",
+        "examples": [
+            {"qry":"/$summary?identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+            "doc":"Retrieve a health summary using the patient NHI"},
+            {"qry":"?identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+                "doc":"Retrieve the demographics (Patient resource) using the patient NHI. The result will be a bundle with (hopefully) a single resource in it."}
+        ]
+    },
+    {"type":"Condition","examples":[
+        {"qry":"?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+            "doc" : "Retrieve all the conditions for a patient with the NHI number ABC2345"
+        }
+    ]}
+   
+]

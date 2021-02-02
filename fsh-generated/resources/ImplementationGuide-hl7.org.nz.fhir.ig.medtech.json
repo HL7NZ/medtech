@@ -71,7 +71,7 @@
           "reference": "StructureDefinition/highlight-condition"
         },
         "name": "HighlightCondition",
-        "description": "If true, then this is a long term condition",
+        "description": "If true, then this is a condition that has been highlighted in the PMS",
         "exampleBoolean": false
       },
       {

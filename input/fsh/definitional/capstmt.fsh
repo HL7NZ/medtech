@@ -1,4 +1,6 @@
 
+Alias: $example = http://cf/ex
+
 Instance:   medTechCapabilityStatement
 InstanceOf: CapabilityStatement
 Title:          "CapabilityStatement"
@@ -53,6 +55,9 @@ Example queries:
 """
 
 * rest.resource.interaction.code = #search-type
+
+//* rest.resource.interaction.extension.url = $example
+//* rest.resource.interaction.extension.extension['value'].valueString = "test"
 
 
 //read by id
