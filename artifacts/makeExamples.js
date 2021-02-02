@@ -48,5 +48,6 @@ ex.forEach(function(examples){
     })
 })
 
+ar.push ("</div>")
 let file = ar.join('\r\n')
 fs.writeFileSync(outFile,file);
