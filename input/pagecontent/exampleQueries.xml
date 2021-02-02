@@ -22,16 +22,88 @@
 <div><strong>[host]/Condition?_id = YYY</strong></div>
 <div><em>Retrieve a single condition with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle </em></div>
 <br/>
-<div><strong>[host]/Condition https://[base]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&long-term-condition=true</strong></div>
+<div><strong>[host]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;long-term-condition=true</strong></div>
 <div><em>Return conditions marked as 'long term' within medTech</em></div>
 <br/>
-<div><strong>[host]/Condition https://[base]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinicalStatus=inactive</strong></div>
+<div><strong>[host]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;clinicalStatus=inactive</strong></div>
 <div><em>Returns conditions that are marked as inactive. Generally, inactive conditions are not returned in a query</em></div>
 <br/>
-<div><strong>[host]/Conditionhttps://[base]/Condition?patient.identifier=ABC2356&_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
-<div><em>Returns coonditions that are marmed as cpnfindential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information</em></div>
+<div><strong>[host]/Condition?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
+<div><em>Returns conditions that are marked as confidential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information</em></div>
 <br/>
 <div><strong>[host]/Condition</strong></div>
+<div><em> </em></div>
+<br/>
+<a name="resourceNedicationRequest"> </a>
+<h3>NedicationRequest</h3>
+<div><strong>[host]/NedicationRequest?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
+<div><em>Retrieve all the prescriptions for a patient with the NHI number ABC2345</em></div>
+<br/>
+<div><strong>[host]/NedicationRequest?patient._id = XXX</strong></div>
+<div><em>Retrieve all the prescriptions for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+<br/>
+<div><strong>[host]/NedicationRequest/{id}</strong></div>
+<div><em>Retrieve a single prescription with a known id. </em></div>
+<br/>
+<div><strong>[host]/NedicationRequest?_id = YYY</strong></div>
+<div><em>Retrieve a single prescription with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle </em></div>
+<br/>
+<div><strong>[host]/NedicationRequest?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;long-term-medication=true</strong></div>
+<div><em>Return prescriptions marked as 'long term' within medTech</em></div>
+<br/>
+<div><strong>[host]/NedicationRequest?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;clinicalStatus=inactive</strong></div>
+<div><em>Returns prescriptions that are marked as inactive. Generally, inactive conditions are not returned in a query</em></div>
+<br/>
+<div><strong>[host]/NedicationRequest?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
+<div><em>Returns prescriptions that are marked as cpnfindential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information</em></div>
+<br/>
+<div><strong>[host]/NedicationRequest</strong></div>
+<div><em> </em></div>
+<br/>
+<a name="resourceObservation"> </a>
+<h3>Observation</h3>
+<br/>
+These queries are descigned to return 'screening' information such as blood pressure. They explicitly exclude laboratory results.
+<br/>
+<div><strong>[host]/Observation?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;category:not=laboratory</strong></div>
+<div><em>Retrieve all the Observations that are not laboratory observations for a patient with the NHI number ABC2345</em></div>
+<br/>
+<div><strong>[host]/Observation?patient._id&amp;category:not=laboratory = XXX</strong></div>
+<div><em>Retrieve all the observations for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+<br/>
+<div><strong>[host]/Observation/{id}</strong></div>
+<div><em>Retrieve a single observation with a known id. </em></div>
+<br/>
+<div><strong>[host]/Observation?_id = YYY</strong></div>
+<div><em>Retrieve a single observation with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle </em></div>
+<br/>
+<div><strong>[host]/Observation?patient.identifier=ABC2356&amp;category:not=laboratory = &amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
+<div><em>Returns observations that are marked as confindential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information</em></div>
+<br/>
+<div><strong>[host]/Observation</strong></div>
+<div><em> </em></div>
+<br/>
+<a name="resourceDocumentReference"> </a>
+<h3>DocumentReference</h3>
+<br/>
+DocumentReference resources are used for clinical notes (eg consultations) and external documents such as discharge summaries
+<br/>
+<div><strong>[host]/DocumentReference?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
+<div><em>Retrieve all the DocumentReference resources for a patient with the NHI number ABC2345</em></div>
+<br/>
+<div><strong>[host]/DocumentReference?patient._id</strong></div>
+<div><em>Retrieve all the DocumentReference resources for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+<br/>
+<div><strong>[host]/DocumentReference/{id}</strong></div>
+<div><em>Retrieve a single DocumentReference resource with a known id. </em></div>
+<br/>
+<div><strong>[host]/DocumentReference?_id = YYY</strong></div>
+<div><em>Retrieve a single DocumentReference resource with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle </em></div>
+<br/>
+<div><strong>[host]/DocumentReference?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
+<div><em>Returns DocumentReference resources that are marked as confindential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information</em></div>
+<br/>
+<div><strong>[host]/DocumentReference</strong></div>
 <div><em> </em></div>
 <br/>
 </div>

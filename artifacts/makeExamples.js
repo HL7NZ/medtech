@@ -40,6 +40,13 @@ ex.forEach(function(examples){
     ar.push('<a name="resource'+type+'"> </a>')   
     ar.push("<h3>"+type+"</h3>")
 
+    if (examples.notes) {
+        ar.push("<br/>")
+        ar.push(examples.notes)
+        ar.push("<br/>")
+
+    }
+
     //ar.push("<br/><strong>Type:"+type+"</strong><br/><br/>")
 
     examples.examples.forEach(function(query) {

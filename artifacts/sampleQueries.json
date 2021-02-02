@@ -20,14 +20,84 @@
         {"qry":"?_id = YYY",
             "doc" : "Retrieve a single condition with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
         },
-        {"qry":" https://[base]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&long-term-condition=true",
+        {"qry":"?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;long-term-condition=true",
             "doc" : "Return conditions marked as 'long term' within medTech"
         },
-        {"qry":" https://[base]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinicalStatus=inactive",
+        {"qry":"?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;clinicalStatus=inactive",
             "doc" : "Returns conditions that are marked as inactive. Generally, inactive conditions are not returned in a query"
         },
-        {"qry":"https://[base]/Condition?patient.identifier=ABC2356&_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
-            "doc" : "Returns coonditions that are marmed as cpnfindential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information"
+        {"qry":"?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
+            "doc" : "Returns conditions that are marked as confidential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information"
+        },
+        {"qry":"",
+            "doc" : " "
+        }
+    ]},
+    {"type":"NedicationRequest","examples":[
+        {"qry":"?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+            "doc" : "Retrieve all the prescriptions for a patient with the NHI number ABC2345"
+        },
+        {"qry":"?patient._id = XXX",
+            "doc" : "Retrieve all the prescriptions for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
+        },
+        {"qry":"/{id}",
+            "doc" : "Retrieve a single prescription with a known id. "
+        },
+        {"qry":"?_id = YYY",
+            "doc" : "Retrieve a single prescription with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
+        },
+        {"qry":"?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;long-term-medication=true",
+            "doc" : "Return prescriptions marked as 'long term' within medTech"
+        },
+        {"qry":"?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;clinicalStatus=inactive",
+            "doc" : "Returns prescriptions that are marked as inactive. Generally, inactive conditions are not returned in a query"
+        },
+        {"qry":"?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
+            "doc" : "Returns prescriptions that are marked as cpnfindential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information"
+        },
+        {"qry":"",
+            "doc" : " "
+        }
+    ]},
+    {"type":"Observation",
+        "notes": "These queries are descigned to return 'screening' information such as blood pressure. They explicitly exclude laboratory results.",
+        "examples":[
+        {"qry":"?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;category:not=laboratory",
+            "doc" : "Retrieve all the Observations that are not laboratory observations for a patient with the NHI number ABC2345"
+        },
+        {"qry":"?patient._id&amp;category:not=laboratory = XXX",
+            "doc" : "Retrieve all the observations for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
+        },
+        {"qry":"/{id}",
+            "doc" : "Retrieve a single observation with a known id. "
+        },
+        {"qry":"?_id = YYY",
+            "doc" : "Retrieve a single observation with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
+        },
+        {"qry":"?patient.identifier=ABC2356&amp;category:not=laboratory = &amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
+            "doc" : "Returns observations that are marked as confindential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information"
+        },
+        {"qry":"",
+            "doc" : " "
+        }
+    ]},
+    {"type":"DocumentReference",
+        "notes" : "DocumentReference resources are used for clinical notes (eg consultations) and external documents such as discharge summaries",
+        "examples":[
+        {"qry":"?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+            "doc" : "Retrieve all the DocumentReference resources for a patient with the NHI number ABC2345"
+        },
+        {"qry":"?patient._id",
+            "doc" : "Retrieve all the DocumentReference resources for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
+        },
+        {"qry":"/{id}",
+            "doc" : "Retrieve a single DocumentReference resource with a known id. "
+        },
+        {"qry":"?_id = YYY",
+            "doc" : "Retrieve a single DocumentReference resource with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
+        },
+        {"qry":"?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
+            "doc" : "Returns DocumentReference resources that are marked as confindential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information"
         },
         {"qry":"",
             "doc" : " "
