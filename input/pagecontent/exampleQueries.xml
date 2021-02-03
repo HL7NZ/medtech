@@ -174,9 +174,9 @@ Validation result:200
 DocumentReference resources are used for clinical notes (eg consultations) and external documents such as discharge summaries. These examples are for RSD (Referral/Status/Discharge documents only
 <br/>
 <br/>
-<div><strong>[host]/DocumentReference?patient.identifier=https://standards.digital.health.nz/ns/nhi-id&amp;ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R&amp;type=http://loinc.org|34109-9</strong></div>
+<div><strong>[host]/DocumentReference?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R&amp;type=http://loinc.org|34109-9</strong></div>
 <div><em>Returns DocumentReference resources that are marked as confidential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information</em></div>
-Validation result:400
+Validation result:200
 <br/>
 <br/>
 <div><strong>[host]/DocumentReference?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;type=http://loinc.org|34109-9</strong></div>
