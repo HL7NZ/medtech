@@ -1,4 +1,4 @@
-Alias: $enrolment = http://hl7.org.nz/fhir/StructureDefinition/patient-enrolment
+Alias: $enrolment = http://hl7.org.nz/fhir/StructureDefinition/patient-nes-enrolment
 
 Profile:        MtPatient
 Parent:         Patient

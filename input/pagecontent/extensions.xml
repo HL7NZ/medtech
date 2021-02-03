@@ -27,12 +27,12 @@
 <td>If true, then this is a long term MedicationRequest</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-patient-enrolment.html'>patient-enrolment</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/patient-enrolment</td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-patient-nes-enrolment.html'>patient-nes-enrolment</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/patient-nes-enrolment</td>
 <td>
-<div>Patient</div>
+<div>PractitionerRole</div>
 </td>
-<td>Additional authorizations that a practitioner is authorized to perform</td>
+<td>An extension applied to PractitionerRole to indicate that itr is referring to the Patient enrollment with a GP Practice under the NES (National Enrolment Service)</td>
 </tr>
 </table>
 <a name="externalExtensions"> </a>

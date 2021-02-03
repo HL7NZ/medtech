@@ -100,10 +100,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/patient-enrolment"
+          "reference": "StructureDefinition/patient-nes-enrolment"
         },
-        "name": "PatientEnrolment",
-        "description": "Additional authorizations that a practitioner is authorized to perform",
+        "name": "PatientNESEnrolment",
+        "description": "An extension applied to PractitionerRole to indicate that itr is referring to the Patient enrollment with a GP Practice under the NES (National Enrolment Service)",
         "exampleBoolean": false
       },
       {

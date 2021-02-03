@@ -91,7 +91,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/patient-enrolment"
+              "http://hl7.org.nz/fhir/StructureDefinition/patient-nes-enrolment"
             ]
           }
         ]

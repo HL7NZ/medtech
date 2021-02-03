@@ -6,39 +6,6 @@
       "http://hl7.org.nz/fhir/StructureDefinition/mtPatient"
     ]
   },
-  "extension": [
-    {
-      "extension": [
-        {
-          "url": "period",
-          "valuePeriod": {
-            "start": "2020-01-01",
-            "end": "2022-01-01"
-          }
-        },
-        {
-          "url": "code",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "ok",
-                "system": "http://systemofcode",
-                "display": "OK enrolment"
-              }
-            ]
-          }
-        },
-        {
-          "url": "hpiNumber",
-          "valueIdentifier": {
-            "system": "https://standards.digital.health.nz/ns/hpi-person-id",
-            "value": "abc1234"
-          }
-        }
-      ],
-      "url": "http://hl7.org.nz/fhir/StructureDefinition/patient-enrolment"
-    }
-  ],
   "name": [
     {
       "given": [
