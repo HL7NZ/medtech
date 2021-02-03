@@ -36,13 +36,15 @@ console.log(ex)
 ex.forEach(function(examples){
     //console.log('--',examples)
     let type = examples.type
+    let heading = examples.title || type
 
-    ar.push('<a name="resource'+type+'"> </a>')   
-    ar.push("<h3>"+type+"</h3>")
+    ar.push('<a name="resource'+heading+'"> </a>')   
+    ar.push("<h3>"+heading+"</h3>")
 
     if (examples.notes) {
         ar.push("<br/>")
         ar.push(examples.notes)
+        ar.push("<br/>")
         ar.push("<br/>")
 
     }
@@ -51,14 +53,17 @@ ex.forEach(function(examples){
 
     examples.examples.forEach(function(query) {
 
-        let q = '[host]/' + type + query.qry
-        ar.push("<div><strong>"+ q +"</strong></div>")
-
-        ar.push("<div><em>"+query.doc+"</em></div>")
-
-
-      
-        ar.push("<br/>")
+        if (query.qry) {
+            let q = '[host]/' + type + cleanText(query.qry)
+            ar.push("<div><strong>"+ q +"</strong></div>")
+    
+            ar.push("<div><em>"+cleanText(query.doc)+"</em></div>")
+    
+    
+          
+            ar.push("<br/>")
+        }
+        
        
 
     })
@@ -67,3 +72,9 @@ ex.forEach(function(examples){
 ar.push ("</div>")
 let file = ar.join('\r\n')
 fs.writeFileSync(outFile,file);
+
+function cleanText(txt) {
+    if (txt) {
+        return txt.split('&').join('&amp;')
+    }
+}
