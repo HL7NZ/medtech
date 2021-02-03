@@ -8,7 +8,8 @@
             },
             {
                 "qry": "?identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345",
-                "doc": "Retrieve the demographics (Patient resource) using the patient NHI. The result will be a bundle with (hopefully) a single resource in it."
+                "doc": "Retrieve the demographics (Patient resource) using the patient NHI. The result will be a bundle with (hopefully) a single resource in it.",
+                "validation": "This query is expected to fail test validation as is not implemented on the test server"
             }
         ]
     },
@@ -25,7 +26,8 @@
             },
             {
                 "qry": "/XXX",
-                "doc": "Retrieve a single condition with a known id (XXX). "
+                "doc": "Retrieve a single condition with a known id (XXX). ",
+                "validation": "This query is expected to fail test validation as the resource does not exist on the test server"
             },
             {
                 "qry": "?_id=YYY",
@@ -33,7 +35,8 @@
             },
             {
                 "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&long-term-condition=true",
-                "doc": "Return conditions marked as 'long term' within medTech"
+                "doc": "Return conditions marked as 'long term' within medTech",
+                "validation": "This query is expected to fail test validation as the search parameter does not exist on the test server"
             },
             {
                 "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinical-status=inactive",
@@ -62,7 +65,8 @@
             },
             {
                 "qry": "/XXX",
-                "doc": "Retrieve a single prescription with a known id (XXX). "
+                "doc": "Retrieve a single prescription with a known id (XXX). ",
+                "validation": "This query is expected to fail test validation as the resource does not exist on the test server"
             },
             {
                 "qry": "?_id=YYY",
@@ -70,7 +74,8 @@
             },
             {
                 "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&long-term-medication=true",
-                "doc": "Return prescriptions marked as 'long term' within medTech"
+                "doc": "Return prescriptions marked as 'long term' within medTech",
+                "validation": "This query is expected to fail test validation as the search parameter does not exist on the test server"
             },
             {
                 "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinical-status=inactive",
@@ -96,12 +101,13 @@
                 "doc": "Retrieve all the Observations that are not laboratory observations for a patient with the NHI number ABC2345"
             },
             {
-                "qry": "?patient._id=XXX&category:not=laboratory=XXX",
+                "qry": "?patient._id=XXX&category:not=laboratory",
                 "doc": "Retrieve all the observations that are not laboratory observations for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
             },
             {
                 "qry": "/YYY",
-                "doc": "Retrieve a single observation with a known id (YYY). "
+                "doc": "Retrieve a single observation with a known id (YYY). ",
+                "validation": "This query is expected to fail test validation as the resource does not exist on the test server"
             },
             {
                 "qry": "?_id=YYY",
@@ -131,7 +137,8 @@
             },
             {
                 "qry": "/YYY",
-                "doc": "Retrieve a single DocumentReference resource with a known id (YYY). Returns a single resource"
+                "doc": "Retrieve a single DocumentReference resource with a known id (YYY). Returns a single resource",
+                "validation": "This query is expected to fail test validation as the resource does not exist on the test server"
             },
             {
                 "qry": "?_id=YYY",
@@ -157,7 +164,7 @@
         "notes": "DocumentReference resources are used for clinical notes (eg consultations) and external documents such as discharge summaries. These examples are for RSD (Referral/Status/Discharge documents only",
         "examples": [
             {
-                "qry": "?patient.identifier=ABC2356&_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R&type=http://loinc.org|34109-9",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id&ABC2356&_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R&type=http://loinc.org|34109-9",
                 "doc": "Returns DocumentReference resources that are marked as confidential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information"
             },
             {
@@ -179,7 +186,8 @@
             },
             {
                 "qry": "/XXX",
-                "doc": "Retrieve a single Immunization resource with a known id (XXX). Returns a single resource"
+                "doc": "Retrieve a single Immunization resource with a known id (XXX). Returns a single resource",
+                "validation": "This query is expected to fail test validation as the resource does not exist on the test server"
             },
             {
                 "qry": "?_id=xxx",
@@ -202,7 +210,8 @@
             },
             {
                 "qry": "/YYY",
-                "doc": "Retrieve a single Lab report with a known lab id (YYY). Returns a single DiagnosticReport resource but not the referenced Observations. These will need to be retrieved separately with queries against Observation - eg GET [host]/Observation/{obs id}"
+                "doc": "Retrieve a single Lab report with a known lab id (YYY). Returns a single DiagnosticReport resource but not the referenced Observations. These will need to be retrieved separately with queries against Observation - eg GET [host]/Observation/{obs id}",
+                "validation": "This query is expected to fail test validation as the resource does not exist on the test server"
             },
             {
                 "qry": "?_id=xxx&_include=DiagnosticReport.result",

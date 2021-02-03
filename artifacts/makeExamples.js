@@ -83,8 +83,13 @@ ex.forEach(function(examples){
             ar.push("<div><strong>"+ q +"</strong></div>")
     
             ar.push("<div><em>"+cleanText(query.doc)+"</em></div>")
+
             if (statusCode > 0) {
-                ar.push(statusCode)
+
+                ar.push("Validation result:"+statusCode)
+                if (query.validation) {
+                    ar.push(" (<em>" + cleanText(query.validation) + "</em>)")
+                }
             }
     
           
