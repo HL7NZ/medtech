@@ -7,55 +7,92 @@
 <h3>Patient</h3>
 <div><strong>[host]/Patient/$summary?identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
 <div><em>Retrieve a health summary using the patient NHI</em></div>
+Validation result:400
+ (<em>This query is expected to fail test validation as is not implemented on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/Patient?identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
 <div><em>Retrieve the demographics (Patient resource) using the patient NHI. The result will be a bundle with (hopefully) a single resource in it.</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceCondition"> </a>
 <h3>Condition</h3>
 <div><strong>[host]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
 <div><em>Retrieve all the conditions for a patient with the NHI number ABC2345</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Condition?patient._id=XXX</strong></div>
 <div><em>Retrieve all the conditions for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Condition/XXX</strong></div>
 <div><em>Retrieve a single condition with a known id (XXX). </em></div>
+Validation result:404
+ (<em>This query is expected to fail test validation as the resource does not exist on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/Condition?_id=YYY</strong></div>
 <div><em>Retrieve a single condition with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle </em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;long-term-condition=true</strong></div>
 <div><em>Return conditions marked as 'long term' within medTech</em></div>
+Validation result:400
+ (<em>This query is expected to fail test validation as the search parameter does not exist on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/Condition?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;clinical-status=inactive</strong></div>
 <div><em>Returns conditions that are marked as inactive. Generally, inactive conditions are not returned in a query</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Condition?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
 <div><em>Returns conditions that are marked as confidential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceMedicationRequest"> </a>
 <h3>MedicationRequest</h3>
 <div><strong>[host]/MedicationRequest?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
 <div><em>Retrieve all the prescriptions for a patient with the NHI number ABC2345</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/MedicationRequest?patient._id=XXX</strong></div>
 <div><em>Retrieve all the prescriptions for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/MedicationRequest/XXX</strong></div>
 <div><em>Retrieve a single prescription with a known id (XXX). </em></div>
+Validation result:404
+ (<em>This query is expected to fail test validation as the resource does not exist on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/MedicationRequest?_id=YYY</strong></div>
 <div><em>Retrieve a single prescription with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle </em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/MedicationRequest?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;long-term-medication=true</strong></div>
 <div><em>Return prescriptions marked as 'long term' within medTech</em></div>
+Validation result:400
+ (<em>This query is expected to fail test validation as the search parameter does not exist on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/MedicationRequest?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;status:not=active</strong></div>
 <div><em>Returns prescriptions that are marked as inactive. Generally, inactive conditions are not returned in a query</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/MedicationRequest?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
 <div><em>Returns prescriptions that are marked as confidential within medTech. Generally, confidential conditions are not returned. Note that there are other security requirements for returning confidential information</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceScreening Observations"> </a>
 <h3>Screening Observations</h3>
@@ -65,18 +102,29 @@ These queries are descigned to return 'screening' information such as blood pres
 <br/>
 <div><strong>[host]/Observation?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;category:not=laboratory</strong></div>
 <div><em>Retrieve all the Observations that are not laboratory observations for a patient with the NHI number ABC2345</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Observation?patient._id=XXX&amp;category:not=laboratory</strong></div>
 <div><em>Retrieve all the observations that are not laboratory observations for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Observation/YYY</strong></div>
 <div><em>Retrieve a single observation with a known id (YYY). </em></div>
+Validation result:404
+ (<em>This query is expected to fail test validation as the resource does not exist on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/Observation?_id=YYY</strong></div>
 <div><em>Retrieve a single observation with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle </em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Observation?patient.identifier=ABC2356&amp;category:not=laboratory=&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
 <div><em>Returns observations that are marked as confindential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceDocumentReference"> </a>
 <h3>DocumentReference</h3>
@@ -86,24 +134,39 @@ DocumentReference resources are used for clinical notes (eg consultations) and e
 <br/>
 <div><strong>[host]/DocumentReference?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
 <div><em>Retrieve all the DocumentReference resources for a patient with the NHI number ABC2345</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/DocumentReference?patient._id=XXX</strong></div>
 <div><em>Retrieve all the DocumentReference resources for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/DocumentReference/YYY</strong></div>
 <div><em>Retrieve a single DocumentReference resource with a known id (YYY). Returns a single resource</em></div>
+Validation result:404
+ (<em>This query is expected to fail test validation as the resource does not exist on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/DocumentReference?_id=YYY</strong></div>
 <div><em>Retrieve a single DocumentReference resource with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle </em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/DocumentReference?patient.identifier=ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
 <div><em>Returns DocumentReference resources that are marked as confidential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/DocumentReference?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;type=http://loinc.org|11488-4</strong></div>
 <div><em>Return all DocumentReference resources for the patient based on NHI that are consultation notes (as opposed to external documents such as Discharge Summaries)</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/DocumentReference?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;type=http://loinc.org|11488-4&amp;_security= https://terminology.hl7.org/CodeSystem/v3-Confidentiality|R</strong></div>
 <div><em>Return all DocumentReference resources for the patient based on NHI that are consultation notes (as opposed to external documents such as Discharge Summaries) which have been marked as confidential. Note that there are other security constraints that need to be satisfied.</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceRSD Documents"> </a>
 <h3>RSD Documents</h3>
@@ -113,23 +176,36 @@ DocumentReference resources are used for clinical notes (eg consultations) and e
 <br/>
 <div><strong>[host]/DocumentReference?patient.identifier=https://standards.digital.health.nz/ns/nhi-id&amp;ABC2356&amp;_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R&amp;type=http://loinc.org|34109-9</strong></div>
 <div><em>Returns DocumentReference resources that are marked as confidential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information</em></div>
+Validation result:400
+<br/>
 <br/>
 <div><strong>[host]/DocumentReference?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;type=http://loinc.org|34109-9</strong></div>
 <div><em>Return all DocumentReference resources for the patient based on NHI that are consultation notes (as opposed to external documents such as Discharge Summaries)</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceImmunization"> </a>
 <h3>Immunization</h3>
 <div><strong>[host]/Immunization?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
 <div><em>Retrieve all the Immunization resources resources for a patient with the NHI number ABC2345</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Immunization?patient._id=XXX</strong></div>
 <div><em>Retrieve all the Immunization resources for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/Immunization/XXX</strong></div>
 <div><em>Retrieve a single Immunization resource with a known id (XXX). Returns a single resource</em></div>
+Validation result:404
+ (<em>This query is expected to fail test validation as the resource does not exist on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/Immunization?_id=xxx</strong></div>
 <div><em>Retrieve a single Immunization resource with a known id (xxx). Returns a bundle containing a single resource</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceLab reports"> </a>
 <h3>Lab reports</h3>
@@ -139,39 +215,62 @@ The actual result (like a Haemoglobin) is recorded as an observation - the Diagn
 <br/>
 <div><strong>[host]/DiagnosticReport?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;_include=DiagnosticReport.result</strong></div>
 <div><em>Retrieve all the Lab results (DiagnosticReport and references Observations) for a patient with the NHI number ABC2345</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/DiagnosticReport?patient._id=XXX</strong></div>
 <div><em>Retrieve all the Lab results for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/DiagnosticReport/YYY</strong></div>
 <div><em>Retrieve a single Lab report with a known lab id (YYY). Returns a single DiagnosticReport resource but not the referenced Observations. These will need to be retrieved separately with queries against Observation - eg GET [host]/Observation/{obs id}</em></div>
+Validation result:404
+ (<em>This query is expected to fail test validation as the resource does not exist on the test server</em>)
+<br/>
 <br/>
 <div><strong>[host]/DiagnosticReport?_id=xxx&amp;_include=DiagnosticReport.result</strong></div>
 <div><em>Retrieve a single Immunization resource with a known lab id (xxx). Returns a bundle containing a single DiagnosticReport resource and the references Observations</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceAllergyIntolerance"> </a>
 <h3>AllergyIntolerance</h3>
 <div><strong>[host]/AllergyIntolerance?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345</strong></div>
 <div><em>Retrieve all the allergies for a patient with the NHI number ABC2345. This includes inactive as well as active.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/AllergyIntolerance?patient._id=XXX</strong></div>
 <div><em>Retrieve all the allergies for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/AllergyIntolerance?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;clinical-status=active</strong></div>
 <div><em>Retrieve the active allergies for a patient with the NHI number ABC2345. Inactive are not included.</em></div>
+Validation result:200
+<br/>
 <br/>
 <div><strong>[host]/AllergyIntolerance?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&amp;clinical-status=active&amp;date=ge2020</strong></div>
 <div><em>Retrieve the active allergies for a patient with the NHI number ABC2345 where the recorded date was 2020 or later</em></div>
+Validation result:200
+<br/>
 <br/>
 <a name="resourceAppointments"> </a>
 <h3>Appointments</h3>
 <div><strong>[host]/Slot?schedule.actor.identifier=https://standards.digital.health.nz/ns/hpi-person-id|HPICPNXXXX&amp;start=ge2020-01-21T11:00:00Z</strong></div>
 <div><em>Retrieve all the appointment slots for the provider with the HPI number HPICPNXXXX starting from 11am 21st Januarty 2020. By default one weeks worth will be returned.</em></div>
+Validation result:400
+<br/>
 <br/>
 <div><strong>[host]/Slot?schedule.actor.identifier=https://standards.digital.health.nz/ns/hpi-person-id|HPICPNXXXX&amp;start=ge2020-01-21T11:00:00Z&amp;start=le2020-01-21T18:00:00Z</strong></div>
 <div><em>Same as the previous query, but the end date is specified</em></div>
+Validation result:400
+<br/>
 <br/>
 <div><strong>[host]/Slot?schedule.actor.identifier=https://standards.digital.health.nz/ns/hpi-person-id|HPICPNXXXX&amp;start=ge2020-01-21T11:00:00Z&amp;status=free</strong></div>
 <div><em>Return the free appointment slots for one week (default period) from 11am 21st Januarty 2020.</em></div>
+Validation result:400
+<br/>
 <br/>
 </div>

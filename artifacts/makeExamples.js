@@ -9,7 +9,7 @@
 
 let syncRequest = require('../../common/node_modules/sync-request/lib');
 let serverRoot = "http://hapi.fhir.org/baseR4/"
-let validate = false;
+let validate = true;
 
  let fs = require('fs');
 let igRoot = "/Users/wendy/IG/medtech/";
