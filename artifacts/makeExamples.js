@@ -9,7 +9,7 @@
 
 let syncRequest = require('../../common/node_modules/sync-request/lib');
 let serverRoot = "http://hapi.fhir.org/baseR4/"
-let validate = true;
+let validate = false;
 
  let fs = require('fs');
 let igRoot = "/Users/wendy/IG/medtech/";
@@ -42,7 +42,14 @@ let contents = fs.readFileSync(sourceFile).toString();
 let ex = JSON.parse(contents)
 //console.log(ex)
 
-ex.forEach(function(examples){
+ar.push('<ul>')
+ex.notes.forEach(function(note){
+    ar.push("<li>"+note+"</li>")
+
+})
+ar.push('</ul>')
+
+ex.queries.forEach(function(examples){
     //console.log('--',examples)
     let type = examples.type
     let heading = examples.title || type
@@ -90,6 +97,7 @@ ex.forEach(function(examples){
                 if (query.validation) {
                     ar.push(" (<em>" + cleanText(query.validation) + "</em>)")
                 }
+                ar.push("<br/>")
             }
     
           
