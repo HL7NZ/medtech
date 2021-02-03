@@ -16,19 +16,19 @@
         "type": "Condition",
         "examples": [
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345",
                 "doc": "Retrieve all the conditions for a patient with the NHI number ABC2345"
             },
             {
-                "qry": "?patient._id = XXX",
+                "qry": "?patient._id=XXX",
                 "doc": "Retrieve all the conditions for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
             },
             {
-                "qry": "/{id}",
-                "doc": "Retrieve a single condition with a known id. "
+                "qry": "/XXX",
+                "doc": "Retrieve a single condition with a known id (XXX). "
             },
             {
-                "qry": "?_id = YYY",
+                "qry": "?_id=YYY",
                 "doc": "Retrieve a single condition with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
             },
             {
@@ -36,7 +36,7 @@
                 "doc": "Return conditions marked as 'long term' within medTech"
             },
             {
-                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinicalStatus=inactive",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinical-status=inactive",
                 "doc": "Returns conditions that are marked as inactive. Generally, inactive conditions are not returned in a query"
             },
             {
@@ -53,19 +53,19 @@
         "type": "MedicationRequest",
         "examples": [
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345",
                 "doc": "Retrieve all the prescriptions for a patient with the NHI number ABC2345"
             },
             {
-                "qry": "?patient._id = XXX",
+                "qry": "?patient._id=XXX",
                 "doc": "Retrieve all the prescriptions for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
             },
             {
-                "qry": "/{id}",
-                "doc": "Retrieve a single prescription with a known id. "
+                "qry": "/XXX",
+                "doc": "Retrieve a single prescription with a known id (XXX). "
             },
             {
-                "qry": "?_id = YYY",
+                "qry": "?_id=YYY",
                 "doc": "Retrieve a single prescription with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
             },
             {
@@ -73,7 +73,7 @@
                 "doc": "Return prescriptions marked as 'long term' within medTech"
             },
             {
-                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinicalStatus=inactive",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinical-status=inactive",
                 "doc": "Returns prescriptions that are marked as inactive. Generally, inactive conditions are not returned in a query"
             },
             {
@@ -92,23 +92,23 @@
         "notes": "These queries are descigned to return 'screening' information such as blood pressure. They explicitly exclude laboratory results.",
         "examples": [
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&category:not=laboratory",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&category:not=laboratory",
                 "doc": "Retrieve all the Observations that are not laboratory observations for a patient with the NHI number ABC2345"
             },
             {
-                "qry": "?patient._id = XXX&category:not=laboratory = XXX",
+                "qry": "?patient._id=XXX&category:not=laboratory=XXX",
                 "doc": "Retrieve all the observations that are not laboratory observations for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
             },
             {
-                "qry": "/{id}",
-                "doc": "Retrieve a single observation with a known id. "
+                "qry": "/YYY",
+                "doc": "Retrieve a single observation with a known id (YYY). "
             },
             {
-                "qry": "?_id = YYY",
+                "qry": "?_id=YYY",
                 "doc": "Retrieve a single observation with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
             },
             {
-                "qry": "?patient.identifier=ABC2356&category:not=laboratory = &_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
+                "qry": "?patient.identifier=ABC2356&category:not=laboratory=&_security=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
                 "doc": "Returns observations that are marked as confindential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information"
             },
             {
@@ -122,19 +122,19 @@
         "notes": "DocumentReference resources are used for clinical notes (eg consultations) and external documents such as discharge summaries.",
         "examples": [
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345",
                 "doc": "Retrieve all the DocumentReference resources for a patient with the NHI number ABC2345"
             },
             {
-                "qry": "?patient._id = XXX",
+                "qry": "?patient._id=XXX",
                 "doc": "Retrieve all the DocumentReference resources for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
             },
             {
-                "qry": "/{id}",
-                "doc": "Retrieve a single DocumentReference resource with a known id. Returns a single resource"
+                "qry": "/YYY",
+                "doc": "Retrieve a single DocumentReference resource with a known id (YYY). Returns a single resource"
             },
             {
-                "qry": "?_id = YYY",
+                "qry": "?_id=YYY",
                 "doc": "Retrieve a single DocumentReference resource with a known id of YYY. This differs from the previous example as it is a search, and so the resource is returned within a bundle "
             },
             {
@@ -142,11 +142,11 @@
                 "doc": "Returns DocumentReference resources that are marked as confidential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information"
             },
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&type=http://loinc.org|11488-4",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&type=http://loinc.org|11488-4",
                 "doc": "Return all DocumentReference resources for the patient based on NHI that are consultation notes (as opposed to external documents such as Discharge Summaries)"
             },
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&type=http://loinc.org|11488-4&_security= https://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&type=http://loinc.org|11488-4&_security= https://terminology.hl7.org/CodeSystem/v3-Confidentiality|R",
                 "doc": "Return all DocumentReference resources for the patient based on NHI that are consultation notes (as opposed to external documents such as Discharge Summaries) which have been marked as confidential. Note that there are other security constraints that need to be satisfied."
             }
         ]
@@ -161,7 +161,7 @@
                 "doc": "Returns DocumentReference resources that are marked as confidential within medTech. Generally, confidential resources are not returned. Note that there are other security requirements for returning confidential information"
             },
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&type=http://loinc.org|34109-9",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&type=http://loinc.org|34109-9",
                 "doc": "Return all DocumentReference resources for the patient based on NHI that are consultation notes (as opposed to external documents such as Discharge Summaries)"
             }
         ]
@@ -170,16 +170,16 @@
         "type": "Immunization",
         "examples": [
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345",
                 "doc": "Retrieve all the Immunization resources resources for a patient with the NHI number ABC2345"
             },
             {
-                "qry": "?patient._id = XXX",
+                "qry": "?patient._id=XXX",
                 "doc": "Retrieve all the Immunization resources for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
             },
             {
-                "qry": "/{id}",
-                "doc": "Retrieve a single Immunization resource with a known id. Returns a single resource"
+                "qry": "/XXX",
+                "doc": "Retrieve a single Immunization resource with a known id (XXX). Returns a single resource"
             },
             {
                 "qry": "?_id=xxx",
@@ -193,16 +193,16 @@
         "notes": "The actual result (like a Haemoglobin) is recorded as an observation - the DiagnosticReport has information about the lab that perfromed the test. The _include modifier is used to include the individual values in the same query",
         "examples": [
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&_include=DiagnosticReport.result",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&_include=DiagnosticReport.result",
                 "doc": "Retrieve all the Lab results (DiagnosticReport and references Observations) for a patient with the NHI number ABC2345"
             },
             {
-                "qry": "?patient._id = XXX",
+                "qry": "?patient._id=XXX",
                 "doc": "Retrieve all the Lab results for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
             },
             {
-                "qry": "/{id}",
-                "doc": "Retrieve a single Lab report with a known lab id. Returns a single DiagnosticReport resource but not the referenced Observations. These will need to be retrieved separately with queries against Observation - eg GET [host]/Observation/{obs id}"
+                "qry": "/YYY",
+                "doc": "Retrieve a single Lab report with a known lab id (YYY). Returns a single DiagnosticReport resource but not the referenced Observations. These will need to be retrieved separately with queries against Observation - eg GET [host]/Observation/{obs id}"
             },
             {
                 "qry": "?_id=xxx&_include=DiagnosticReport.result",
@@ -214,19 +214,19 @@
         "type": "AllergyIntolerance",
         "examples": [
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345",
                 "doc": "Retrieve all the allergies for a patient with the NHI number ABC2345. This includes inactive as well as active."
             },
             {
-                "qry": "?patient._id = XXX",
+                "qry": "?patient._id=XXX",
                 "doc": "Retrieve all the allergies for a patient with the id of XXX. This is not the same as the patient NHI which is an identifier."
             },
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinicalStatus=active",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinical-status=active",
                 "doc": "Retrieve the active allergies for a patient with the NHI number ABC2345. Inactive are not included."
             },
             {
-                "qry": "?patient.identifier = https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinicalStatus=active&date=ge2020",
+                "qry": "?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|ABC2345&clinical-status=active&date=ge2020",
                 "doc": "Retrieve the active allergies for a patient with the NHI number ABC2345 where the recorded date was 2020 or later"
             }
         ]
