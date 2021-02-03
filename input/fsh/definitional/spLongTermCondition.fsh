@@ -10,10 +10,12 @@ Usage: #definition
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Long term condition search</div>"
 
 * url = "http://hl7.org.nz/fhir/hpi/SearchParameter/long-term-condition"
-* name = "LongTermCondition"
+* name = "LongTermCondition"        //note that this is just a name - the actual parameter string is the code.
 
 * status = #draft
 * description = "Allows the client to retrieve only the Conditions marked as 'long term'"
+
+//the code is the actual parameter. 
 * code = #long-term-condition
 * base = #Condition
 * type = #token

@@ -52,6 +52,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mtMedicationRequest"
+        },
+        "name": "MedicationRequest profile",
+        "description": "The MedicationRequest resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mtPatient"
         },
         "name": "Patient profile",
@@ -84,6 +92,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/long-term-medication"
+        },
+        "name": "LongTermMedication",
+        "description": "If true, then this is a long term MedicationRequest",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/patient-enrolment"
         },
         "name": "PatientEnrolment",
@@ -96,6 +112,14 @@
         },
         "name": "Search on Long term condition flag",
         "description": "Allows the client to retrieve only the Conditions marked as 'long term'",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/LongTermMedication"
+        },
+        "name": "Search on Long term medication flag",
+        "description": "Allows the client to retrieve only the MedicationRequest resources marked as 'long term'",
         "exampleBoolean": false
       },
       {
@@ -176,6 +200,11 @@
         {
           "nameUrl": "capabilityStatement.html",
           "title": "Capability Statement",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "exampleQueries.html",
+          "title": "Example Queries",
           "generation": "html"
         },
         {

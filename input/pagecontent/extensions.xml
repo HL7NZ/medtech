@@ -19,6 +19,14 @@
 <td>If true, then this is a long term condition</td>
 </tr>
 <tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-long-term-medication.html'>long-term-medication</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/long-term-medication</td>
+<td>
+<div>MedicationRequest</div>
+</td>
+<td>If true, then this is a long term MedicationRequest</td>
+</tr>
+<tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-patient-enrolment.html'>patient-enrolment</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/patient-enrolment</td>
 <td>

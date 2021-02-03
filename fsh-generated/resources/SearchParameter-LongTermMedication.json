@@ -1,0 +1,27 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "LongTermMedication",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Long term medication search</div>"
+  },
+  "url": "http://hl7.org.nz/fhir/hpi/SearchParameter/long-term-medication",
+  "name": "LongTermMedication",
+  "status": "draft",
+  "description": "Allows the client to retrieve only the MedicationRequest resources marked as 'long term'",
+  "code": "long-term-medication",
+  "base": [
+    "MedicationRequest"
+  ],
+  "type": "token"
+}

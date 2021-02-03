@@ -41,11 +41,6 @@
           "interaction": [
             {
               "code": "read",
-              "extension": [
-                {
-                  "url": "http://cf/ex"
-                }
-              ],
               "documentation": "Used to retrieve a Patient resource by Id."
             }
           ],

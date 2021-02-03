@@ -19,6 +19,11 @@
 <td>The Observation to use when exposing laboratory data</td>
 </tr>
 <tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtMedicationRequest.html'>mtMedicationRequest</a></td>
+<td>http://hl7.org.nz/fhir/ig/medtech/StructureDefinition/mtMedicationRequest</td>
+<td>The MedicationRequest resource exposed by the ALEX infrastructure.</td>
+</tr>
+<tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtPatient.html'>mtPatient</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/mtPatient</td>
 <td>The Patient resource exposed by the ALEX infrastructure.</td>
