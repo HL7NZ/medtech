@@ -114,8 +114,8 @@ how to do 'since'
 * rest.resource[1].interaction.code = #read //[host]/Condition/{id}  [host]/Condition?_id={id}
 
 //read by NHI
-* rest.resource[1].searchParam.name = "identifier"
-* rest.resource[1].searchParam.type = #token
+* rest.resource[1].searchParam.name = "patient"
+* rest.resource[1].searchParam.type = #reference
 * rest.resource[1].searchParam.documentation = """
 The API supports a chained query on the patient identifier (NHI) 
 This has the syntax:
@@ -123,9 +123,8 @@ This has the syntax:
 
 If the system is absent, the NHI is assumed
 
-check syntax for search by patient.id
-
-A query on the Condition identifier is NOT supported
+There is also support for a chained query on patient id with the syntax:
+[host]/Condition?patient._id = {id} where {id} is the patients id
 
 
 
@@ -160,14 +159,17 @@ These are the FHIR representation of prescriptions in medTech
 * rest.resource[2].interaction[1].documentation = """
 
 """
-* rest.resource[2].searchParam.name = "identifier"
-* rest.resource[2].searchParam.type = #token
+* rest.resource[2].searchParam.name = "patient"
+* rest.resource[2].searchParam.type = #reference
 * rest.resource[2].searchParam.documentation = """
 The API supports a chained query on the patient identifier (NHI) 
 This has the syntax:
 [host]/MedicationRequest?patient.identifier={system|value}
 
 If the system is absent, the NHI is assumed
+
+There is also support for a chained query on patient id with the syntax:
+[host]/MedicationRequest?patient._id = {id} where {id} is the patients id
 
 """
 
@@ -215,14 +217,17 @@ and for screening data.
 
 
 //read by NHI
-* rest.resource[3].searchParam.name = "identifier"
-* rest.resource[3].searchParam.type = #token
+* rest.resource[3].searchParam.name = "patient"
+* rest.resource[3].searchParam.type = #reference
 * rest.resource[3].searchParam.documentation = """
 The API supports a chained query on the patient identifier (NHI) 
 This has the syntax:
 [host]/Condition?patient.identifier={system|value}
 
 If the system is absent, the NHI is assumed
+
+There is also support for a chained query on patient id with the syntax:
+[host]/Observation?patient._id = {id} where {id} is the patients id
 
 A query on the Observation identifier is NOT supported
 """
@@ -247,16 +252,16 @@ and le (less than or equal to)
 """
 
 //read by NHI
-* rest.resource[4].searchParam.name = "identifier"
-* rest.resource[4].searchParam.type = #token
+* rest.resource[4].searchParam.name = "patient"
+* rest.resource[4].searchParam.type = #reference
 * rest.resource[4].searchParam.documentation = """
 The API supports a chained query on the patient identifier (NHI) 
 This has the syntax:
-[host]/Condition?patient.identifier={system|value}
+[host]/Encounter?patient.identifier={system|value}
 
 If the system is absent, the NHI is assumed
-
-A query on the Observation identifier is NOT supported
+There is also support for a chained query on patient id with the syntax:
+[host]/Encounter?patient._id = {id} where {id} is the patients id
 """
 
 //read by date
@@ -280,18 +285,20 @@ and le (less than or equal to)
 """
 
 //read by NHI
-* rest.resource[5].searchParam.name = "identifier"
+* rest.resource[5].searchParam.name = "patient"
 * rest.resource[5].searchParam.type = #token
 * rest.resource[5].searchParam.documentation = """
 The API supports a chained query on the patient identifier (NHI) 
 This has the syntax:
-[host]/Condition?patient.identifier={system|value}
-
+[host]/Immunization?patient.identifier={system|value}
 If the system is absent, the NHI is assumed
 
-A query on the Observation identifier is NOT supported
+There is also support for a chained query on patient id with the syntax:
+[host]/Immunization?patient._id = {id} where {id} is the patients id
+
 """
 
+/*
 //read by date
 * rest.resource[5].searchParam[1].name = "date"
 * rest.resource[5].searchParam[1].type = #date
@@ -299,6 +306,8 @@ A query on the Observation identifier is NOT supported
 The API also supports searching by date range - ge (Greater than or equal to)
 and le (less than or equal to)
 """
+
+*/
 
 // ============== The DiagnosticReport endpoint
 * rest.resource[6].type = #DiagnosticReport
@@ -311,16 +320,16 @@ The search queries support the _include value of 'result' to allow the Observati
 call
 """
 //read by NHI
-* rest.resource[6].searchParam.name = "identifier"
-* rest.resource[6].searchParam.type = #token
+* rest.resource[6].searchParam.name = "patient"
+* rest.resource[6].searchParam.type = #reference
 * rest.resource[6].searchParam.documentation = """
 The API supports a chained query on the patient identifier (NHI) 
 This has the syntax:
-[host]/Condition?patient.identifier={system|value}
+[host]/DiagnosticReport?patient.identifier={system|value}
 
 If the system is absent, the NHI is assumed
-
-A query on the Observation identifier is NOT supported
+There is also support for a chained query on patient id with the syntax:
+[host]/DiagnosticReport?patient._id = {id} where {id} is the patients id
 """
 
 //read by date
@@ -344,16 +353,16 @@ and le (less than or equal to)
 
 
 //read by NHI
-* rest.resource[7].searchParam.name = "identifier"
-* rest.resource[7].searchParam.type = #token
+* rest.resource[7].searchParam.name = "patient"
+* rest.resource[7].searchParam.type = #reference
 * rest.resource[7].searchParam.documentation = """
 The API supports a chained query on the patient identifier (NHI) 
 This has the syntax:
-[host]/Condition?patient.identifier={system|value}
+[host]/AllergyIntolerance?patient.identifier={system|value}
 
 If the system is absent, the NHI is assumed
-
-A query on the Condition identifier is NOT supported
+There is also support for a chained query on patient id with the syntax:
+[host]/AllergyIntolerance?patient._id = {id} where {id} is the patients id
 """
 
 * rest.resource[7].searchParam[1].name = "clinical-status"
@@ -429,7 +438,13 @@ Represents an appointment for a Patient with a Practitioner.
 * rest.resource[10].searchParam[0].name = "patient"
 * rest.resource[10].searchParam[0].type = #reference
 * rest.resource[10].searchParam[0].documentation = """
-Return all appointments for a patient
+The API supports a chained query on the patient identifier (NHI) 
+This has the syntax:
+[host]/Appointment?patient.identifier={system|value}
+
+If the system is absent, the NHI is assumed
+There is also support for a chained query on patient id with the syntax:
+[host]/Appointment?patient._id = {id} where {id} is the patients id
 """
 
 * rest.resource[10].searchParam[1].name = "date"
@@ -475,8 +490,8 @@ document can be retrieved.
 
 """
 //read by NHI
-* rest.resource[11].searchParam.name = "identifier"
-* rest.resource[11].searchParam.type = #token
+* rest.resource[11].searchParam.name = "patient"
+* rest.resource[11].searchParam.type = #reference
 * rest.resource[11].searchParam.documentation = """
 The API supports a chained query on the patient identifier (NHI) 
 This has the syntax:
@@ -484,7 +499,8 @@ This has the syntax:
 
 If the system is absent, the NHI is assumed
 
-A query on the DocumentReference identifier is NOT supported
+There is also support for a chained query on patient id with the syntax:
+[host]/Appointment?patient._id = {id} where {id} is the patients id
 """
 
 * rest.resource[11].searchParam[1].name = "_security"

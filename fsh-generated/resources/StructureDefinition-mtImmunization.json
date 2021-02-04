@@ -63,8 +63,89 @@
   "differential": {
     "element": [
       {
-        "id": "Immunization",
-        "path": "Immunization"
+        "id": "Immunization.identifier",
+        "path": "Immunization.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.statusReason",
+        "path": "Immunization.statusReason",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.encounter",
+        "path": "Immunization.encounter",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.primarySource",
+        "path": "Immunization.primarySource",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.reportOrigin",
+        "path": "Immunization.reportOrigin",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.location",
+        "path": "Immunization.location",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.manufacturer",
+        "path": "Immunization.manufacturer",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.doseQuantity",
+        "path": "Immunization.doseQuantity",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.reasonCode",
+        "path": "Immunization.reasonCode",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.reasonReference",
+        "path": "Immunization.reasonReference",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.isSubpotent",
+        "path": "Immunization.isSubpotent",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.subpotentReason",
+        "path": "Immunization.subpotentReason",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.education",
+        "path": "Immunization.education",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.programEligibility",
+        "path": "Immunization.programEligibility",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.fundingSource",
+        "path": "Immunization.fundingSource",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.reaction",
+        "path": "Immunization.reaction",
+        "max": "0"
+      },
+      {
+        "id": "Immunization.protocolApplied",
+        "path": "Immunization.protocolApplied",
+        "max": "0"
       }
     ]
   }
