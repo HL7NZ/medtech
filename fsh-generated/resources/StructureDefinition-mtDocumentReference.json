@@ -1,0 +1,132 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mtDocumentReference",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">medtech DocumentReference</div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Documents"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/mtDocumentReference",
+  "version": "0.1.0",
+  "name": "MtDocumentReference",
+  "title": "DocumentReference profile",
+  "status": "active",
+  "description": "The DocumentReference resource exposed by the ALEX infrastructure.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "purpose": "The DocumentReference resource exposed by the ALEX infrastructure.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "fhircomposition",
+      "uri": "http://hl7.org/fhir/composition",
+      "name": "FHIR Composition"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "xds",
+      "uri": "http://ihe.net/xds",
+      "name": "XDS metadata equivalent"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.masterIdentifier",
+        "path": "DocumentReference.masterIdentifier",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.identifier",
+        "path": "DocumentReference.identifier",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.docStatus",
+        "path": "DocumentReference.docStatus",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.authenticator",
+        "path": "DocumentReference.authenticator",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.relatesTo",
+        "path": "DocumentReference.relatesTo",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.description",
+        "path": "DocumentReference.description",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.securityLabel",
+        "path": "DocumentReference.securityLabel",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.context",
+        "path": "DocumentReference.context",
+        "max": "0"
+      }
+    ]
+  }
+}

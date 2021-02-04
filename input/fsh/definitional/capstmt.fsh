@@ -65,9 +65,9 @@ Example queries:
 * rest.resource.interaction.documentation = "Used to retrieve a Patient resource by Id."
 
 
-* rest.resource.searchParam.name = "namex"
+* rest.resource.searchParam.name = "name"
 * rest.resource.searchParam.type = #string
-* rest.resource.searchParam.documentation = "> [host]/Patient?name='doe'"
+//* rest.resource.searchParam.documentation = "> [host]/Patient?name='doe'"
 
 * rest.resource.searchParam[1].name = "family"
 * rest.resource.searchParam[1].type = #string
@@ -145,15 +145,57 @@ Whether the Condition has been marked by the Practitioner as a long term one. Th
 in the resource as an extension.
 """
 
-// ============== The MedicationStatement endpoint
-* rest.resource[2].type = #MedicationStatement
+// ============== The MedicationRequest endpoint
+* rest.resource[2].type = #MedicationRequest
 * rest.resource[2].documentation = """
-
+These are the FHIR representation of prescriptions in medTech
 
 """
 
 //read by id
 * rest.resource[2].interaction.code = #read
+
+//search 
+* rest.resource[2].interaction[1].code = #search-type
+* rest.resource[2].interaction[1].documentation = """
+
+"""
+* rest.resource[2].searchParam.name = "identifier"
+* rest.resource[2].searchParam.type = #token
+* rest.resource[2].searchParam.documentation = """
+The API supports a chained query on the patient identifier (NHI) 
+This has the syntax:
+[host]/MedicationRequest?patient.identifier={system|value}
+
+If the system is absent, the NHI is assumed
+
+"""
+
+* rest.resource[2].searchParam[1].name = "_security"
+* rest.resource[2].searchParam[1].type = #token
+
+* rest.resource[2].searchParam[1].documentation = """
+By default, MedicationRequest resources marked as confidential will not be retuned in a query. This parameter allows a user to specify that they want the confidential records. There are security and provacy constraints that must be met as well.
+
+"""
+
+* rest.resource[2].searchParam[2].name = "status"
+* rest.resource[2].searchParam[2].type = #token
+* rest.resource[2].searchParam[2].documentation = """
+By default, prescriptions that are not active will not be returned. This search parameter allows for non-active prescriptions to be returned - specifically through the :not modifier
+
+"""
+
+* rest.resource[2].searchParam[3].name = "long-term-medication"
+* rest.resource[2].searchParam[3].type = #token
+* rest.resource[2].searchParam[3].definition = "http://hl7.org.nz/fhir/hpi/SearchParameter/long-term-medication"
+* rest.resource[2].searchParam[3].documentation = """
+This is a search for MedicationRequests that have the 'long-term-medication' extension set to true. It
+is defined by a custom search parameter
+
+"""
+
+
 
 
 // ============== The Observation endpoint
@@ -164,7 +206,9 @@ and for screening data.
 
 """
 
-* rest.resource[3].interaction.code = #search-type
+* rest.resource[3].interaction.code = #read
+
+* rest.resource[3].interaction[1].code = #search-type
 * rest.resource[3].interaction.documentation = """
 
 """
@@ -195,7 +239,9 @@ and le (less than or equal to)
 // ============== The Encounter endpoint
 * rest.resource[4].type = #Encounter
 
-* rest.resource[4].interaction.code = #search-type
+* rest.resource[4].interaction.code = #read
+
+* rest.resource[4].interaction[1].code = #search-type
 * rest.resource[4].interaction.documentation = """
 
 """
@@ -226,7 +272,9 @@ and le (less than or equal to)
 // ============== The Immunization endpoint
 * rest.resource[5].type = #Immunization
 
-* rest.resource[5].interaction.code = #search-type
+* rest.resource[5].interaction.code = #read
+
+* rest.resource[5].interaction[1].code = #search-type
 * rest.resource[5].interaction.documentation = """
 
 """
@@ -256,8 +304,8 @@ and le (less than or equal to)
 * rest.resource[6].type = #DiagnosticReport
 
 
-
-* rest.resource[6].interaction.code = #search-type
+* rest.resource[6].interaction.code = #read
+* rest.resource[6].interaction[1].code = #search-type
 * rest.resource[6].interaction.documentation = """
 The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same
 call
@@ -287,15 +335,13 @@ and le (less than or equal to)
 // ============== The AllergyIntolerance endpoint
 * rest.resource[7].type = #AllergyIntolerance
 
-* rest.resource[7].interaction.code = #search-type
+* rest.resource[7].interaction.code = #read
+* rest.resource[7].interaction[1].code = #search-type
 * rest.resource[7].interaction.documentation = """
 
 """
 
-* rest.resource[7].interaction.code = #search-type
-* rest.resource[7].interaction.documentation = """
 
-"""
 
 //read by NHI
 * rest.resource[7].searchParam.name = "identifier"
@@ -418,13 +464,14 @@ There will be security mechanisms to ensure that deletion is controlled.
 // ============== The DocumentReference endpoint
 * rest.resource[11].type = #DocumentReference
 * rest.resource[11].documentation = """
-Used to represent clincial notes and external documents such as Discharge Summaries. For a clincial note, the note will be 
+Used to represent clinical notes and external documents such as Discharge Summaries. For a clincial note, the note will be 
 in the content.attachment.data element. For external files the url will be a reference to a Binary endpoint from where the
 document can be retrieved.
 """
 
-* rest.resource[11].interaction.code = #search-type
-* rest.resource[11].interaction.documentation = """
+* rest.resource[11].interaction.code = #read
+* rest.resource[11].interaction[1].code = #search-type
+* rest.resource[11].interaction[1].documentation = """
 
 """
 //read by NHI
@@ -440,12 +487,22 @@ If the system is absent, the NHI is assumed
 A query on the DocumentReference identifier is NOT supported
 """
 
+* rest.resource[11].searchParam[1].name = "_security"
+* rest.resource[11].searchParam[1].type = #token
+
+* rest.resource[11].searchParam[1].documentation = """
+By default, DocumentReference resources marked as confidential will not be retuned in a query. This parameter allows a user to specify that they want the confidential records. There are security and privacy constraints that must be met as well.
+
+"""
+
 //============= The Binary endpoint
 * rest.resource[12].type = #Binary
 * rest.resource[12].documentation = """
 Used to return documents such as PDF files. Generally in response to a url contained in a DocumentReference
 that refers to a discharge summary or other external document.
 """
+
+* rest.resource[12].interaction.code = #read
 
 // ============== The Practitioner endpoint
 

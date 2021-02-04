@@ -46,9 +46,8 @@
           ],
           "searchParam": [
             {
-              "name": "namex",
-              "type": "string",
-              "documentation": "> [host]/Patient?name='doe'"
+              "name": "name",
+              "type": "string"
             },
             {
               "name": "family",
@@ -103,11 +102,38 @@
           ]
         },
         {
-          "type": "MedicationStatement",
-          "documentation": "\n",
+          "type": "MedicationRequest",
+          "documentation": "These are the FHIR representation of prescriptions in medTech\n",
           "interaction": [
             {
               "code": "read"
+            },
+            {
+              "code": "search-type",
+              "documentation": ""
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "type": "token",
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/MedicationRequest?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n"
+            },
+            {
+              "name": "_security",
+              "type": "token",
+              "documentation": "By default, MedicationRequest resources marked as confidential will not be retuned in a query. This parameter allows a user to specify that they want the confidential records. There are security and provacy constraints that must be met as well.\n"
+            },
+            {
+              "name": "status",
+              "type": "token",
+              "documentation": "By default, prescriptions that are not active will not be returned. This search parameter allows for non-active prescriptions to be returned - specifically through the :not modifier\n"
+            },
+            {
+              "name": "long-term-medication",
+              "type": "token",
+              "definition": "http://hl7.org.nz/fhir/hpi/SearchParameter/long-term-medication",
+              "documentation": "This is a search for MedicationRequests that have the 'long-term-medication' extension set to true. It\nis defined by a custom search parameter\n"
             }
           ]
         },
@@ -116,8 +142,11 @@
           "documentation": "Observations are used in 2 main ways: as the details for lab results (such as a haemoglobin result)\nand for screening data.\n",
           "interaction": [
             {
-              "code": "search-type",
+              "code": "read",
               "documentation": ""
+            },
+            {
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -137,8 +166,11 @@
           "type": "Encounter",
           "interaction": [
             {
-              "code": "search-type",
+              "code": "read",
               "documentation": ""
+            },
+            {
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -158,8 +190,11 @@
           "type": "Immunization",
           "interaction": [
             {
-              "code": "search-type",
+              "code": "read",
               "documentation": ""
+            },
+            {
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -179,8 +214,11 @@
           "type": "DiagnosticReport",
           "interaction": [
             {
-              "code": "search-type",
+              "code": "read",
               "documentation": "The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same\ncall"
+            },
+            {
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -203,8 +241,11 @@
           "type": "AllergyIntolerance",
           "interaction": [
             {
-              "code": "search-type",
+              "code": "read",
               "documentation": ""
+            },
+            {
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -289,8 +330,11 @@
         },
         {
           "type": "DocumentReference",
-          "documentation": "Used to represent clincial notes and external documents such as Discharge Summaries. For a clincial note, the note will be \nin the content.attachment.data element. For external files the url will be a reference to a Binary endpoint from where the\ndocument can be retrieved.",
+          "documentation": "Used to represent clinical notes and external documents such as Discharge Summaries. For a clincial note, the note will be \nin the content.attachment.data element. For external files the url will be a reference to a Binary endpoint from where the\ndocument can be retrieved.",
           "interaction": [
+            {
+              "code": "read"
+            },
             {
               "code": "search-type",
               "documentation": ""
@@ -301,12 +345,22 @@
               "name": "identifier",
               "type": "token",
               "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/DocumentReference?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nA query on the DocumentReference identifier is NOT supported"
+            },
+            {
+              "name": "_security",
+              "type": "token",
+              "documentation": "By default, DocumentReference resources marked as confidential will not be retuned in a query. This parameter allows a user to specify that they want the confidential records. There are security and privacy constraints that must be met as well.\n"
             }
           ]
         },
         {
           "type": "Binary",
-          "documentation": "Used to return documents such as PDF files. Generally in response to a url contained in a DocumentReference\nthat refers to a discharge summary or other external document."
+          "documentation": "Used to return documents such as PDF files. Generally in response to a url contained in a DocumentReference\nthat refers to a discharge summary or other external document.",
+          "interaction": [
+            {
+              "code": "read"
+            }
+          ]
         },
         {
           "interaction": [

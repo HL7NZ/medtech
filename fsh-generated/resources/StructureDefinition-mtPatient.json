@@ -97,13 +97,53 @@
         ]
       },
       {
-        "id": "Patient.name",
-        "path": "Patient.name",
-        "min": 1
+        "id": "Patient.extension:ethnicity",
+        "path": "Patient.extension",
+        "sliceName": "ethnicity",
+        "min": 0,
+        "max": "6",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "max": "0"
+      },
+      {
+        "id": "Patient.deceased[x]",
+        "path": "Patient.deceased[x]",
+        "max": "0"
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "path": "Patient.maritalStatus",
+        "max": "0"
+      },
+      {
+        "id": "Patient.multipleBirth[x]",
+        "path": "Patient.multipleBirth[x]",
+        "max": "0"
       },
       {
         "id": "Patient.photo",
         "path": "Patient.photo",
+        "max": "0"
+      },
+      {
+        "id": "Patient.communication",
+        "path": "Patient.communication",
+        "max": "0"
+      },
+      {
+        "id": "Patient.link",
+        "path": "Patient.link",
         "max": "0"
       }
     ]

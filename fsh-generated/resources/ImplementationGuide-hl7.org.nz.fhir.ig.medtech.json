@@ -24,6 +24,14 @@
   "fhirVersion": [
     "4.0.1"
   ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.org.nz.fhir.ig.nhi",
+      "version": "current",
+      "uri": "http://hl7.org.nz/fhir/ig/nhi/ImplementationGuide/hl7.org.nz.fhir.ig.nhi",
+      "id": "hl7_org_nz_fhir_ig_nhi"
+    }
+  ],
   "definition": {
     "resource": [
       {
@@ -32,6 +40,14 @@
         },
         "name": "Condition profile",
         "description": "The Condition resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mtDocumentReference"
+        },
+        "name": "DocumentReference profile",
+        "description": "The DocumentReference resource exposed by the ALEX infrastructure.",
         "exampleBoolean": false
       },
       {
