@@ -37,7 +37,7 @@
       "resource": [
         {
           "type": "Patient",
-          "documentation": "The [Patient](http://hl7.org/fhir/patient.html) resource represents patient demographics.\n\nExample queries:\n\n> [host]/Patient?identifier=https://standards.digital.health.nz/ns/nhi-id|WER4568\n\n> [host]/Patient?name=smith&dob=2018-12-12\n",
+          "documentation": "The [Patient](http://hl7.org/fhir/patient.html) resource represents patient demographics.\n\n",
           "interaction": [
             {
               "code": "read",

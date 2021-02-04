@@ -46,11 +46,6 @@ Refer to the spec for details on the [API](http://hl7.org/fhir/http.html) and
 * rest.resource.documentation = """
 The [Patient](http://hl7.org/fhir/patient.html) resource represents patient demographics.
 
-Example queries:
-
-> [host]/Patient?identifier=https://standards.digital.health.nz/ns/nhi-id|WER4568
-
-> [host]/Patient?name=smith&dob=2018-12-12
 
 """
 

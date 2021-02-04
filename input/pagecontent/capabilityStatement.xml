@@ -12,13 +12,6 @@ the data. It is the responsibility of the client to perform any aggregation and 
 <a name="Patient"> </a>
 <h3>Patient</h3>
 <div><p>The <a href="http://hl7.org/fhir/patient.html">Patient</a> resource represents patient demographics.</p>
-<p>Example queries:</p>
-<blockquote>
-<p>[host]/Patient?identifier=https://standards.digital.health.nz/ns/nhi-id|WER4568</p>
-</blockquote>
-<blockquote>
-<p>[host]/Patient?name=smith&amp;dob=2018-12-12</p>
-</blockquote>
 </div>
 <br></br>
 <strong>Interactions</strong>
@@ -32,34 +25,27 @@ the data. It is the responsibility of the client to perform any aggregation and 
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>namex</td>
+<td>name</td>
 <td>string</td>
 <td></td>
-<td><blockquote>
-<p>[host]/Patient?name='doe'</p>
-</blockquote>
-</td>
 </tr>
 <tr>
 <td>family</td>
 <td>string</td>
-<td></td>
 <td><p>Not case sensitive</p>
 </td>
 </tr>
 <tr>
 <td>birthDate</td>
 <td>string</td>
-<td></td>
 <td><p>Not case sensitive</p>
 </td>
 </tr>
 <tr>
 <td>identifier</td>
 <td>token</td>
-<td></td>
 <td><p>If the system is not supplied, then the NHI is assumed</p>
 </td>
 </tr>
@@ -80,38 +66,36 @@ the data. It is the responsibility of the client to perform any aggregation and 
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>identifier</td>
-<td>token</td>
-<td></td>
+<td>patient</td>
+<td>reference</td>
 <td><p>The API supports a chained query on the patient identifier (NHI)
 This has the syntax:
 [host]/Condition?patient.identifier={system|value}</p>
 <p>If the system is absent, the NHI is assumed</p>
-<p>check syntax for search by patient.id</p>
-<p>A query on the Condition identifier is NOT supported</p>
+<p>There is also support for a chained query on patient id with the syntax:
+[host]/Condition?patient._id = {id} where {id} is the patients id</p>
 </td>
 </tr>
 <tr>
 <td>clinical-status</td>
 <td>token</td>
-<td></td>
 <td><p>The clinical status of the Condition. Only 'active' or 'inactive' values are supported</p>
 </td>
 </tr>
 <tr>
 <td>long-term-condition</td>
 <td>token</td>
-<td>http://hl7.org.nz/fhir/SearchParameter/long-term-condition</td>
-<td><p>Whether the Condition has been marked by the Practitioner as a long term one. This is indicated
+<td><div>Definition: http://hl7.org.nz/fhir/SearchParameter/long-term-condition</div><p>Whether the Condition has been marked by the Practitioner as a long term one. This is indicated
 in the resource as an extension.</p>
 </td>
 </tr>
 </table>
-<a name="MedicationStatement"> </a>
-<h3>MedicationStatement</h3>
-<div></div>
+<a name="MedicationRequest"> </a>
+<h3>MedicationRequest</h3>
+<div><p>These are the FHIR representation of prescriptions in medTech</p>
+</div>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
@@ -119,6 +103,44 @@ in the resource as an extension.</p>
 <tr>
 <td>read</td>
 <td></td>
+</tr>
+<tr>
+<td>search-type</td>
+<td></td>
+</tr>
+</table>
+<strong>Search Parameters</strong>
+<table class='table table-bordered table-condensed'>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
+<tr>
+<td>patient</td>
+<td>reference</td>
+<td><p>The API supports a chained query on the patient identifier (NHI)
+This has the syntax:
+[host]/MedicationRequest?patient.identifier={system|value}</p>
+<p>If the system is absent, the NHI is assumed</p>
+<p>There is also support for a chained query on patient id with the syntax:
+[host]/MedicationRequest?patient._id = {id} where {id} is the patients id</p>
+</td>
+</tr>
+<tr>
+<td>_security</td>
+<td>token</td>
+<td><p>By default, MedicationRequest resources marked as confidential will not be retuned in a query. This parameter allows a user to specify that they want the confidential records. There are security and provacy constraints that must be met as well.</p>
+</td>
+</tr>
+<tr>
+<td>status</td>
+<td>token</td>
+<td><p>By default, prescriptions that are not active will not be returned. This search parameter allows for non-active prescriptions to be returned - specifically through the :not modifier</p>
+</td>
+</tr>
+<tr>
+<td>long-term-medication</td>
+<td>token</td>
+<td><div>Definition: http://hl7.org.nz/fhir/hpi/SearchParameter/long-term-medication</div><p>This is a search for MedicationRequests that have the 'long-term-medication' extension set to true. It
+is defined by a custom search parameter</p>
+</td>
 </tr>
 </table>
 <a name="Observation"> </a>
@@ -131,28 +153,32 @@ and for screening data.</p>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
 <tr>
+<td>read</td>
+<td></td>
+</tr>
+<tr>
 <td>search-type</td>
 <td></td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>identifier</td>
-<td>token</td>
-<td></td>
+<td>patient</td>
+<td>reference</td>
 <td><p>The API supports a chained query on the patient identifier (NHI)
 This has the syntax:
 [host]/Condition?patient.identifier={system|value}</p>
 <p>If the system is absent, the NHI is assumed</p>
+<p>There is also support for a chained query on patient id with the syntax:
+[host]/Observation?patient._id = {id} where {id} is the patients id</p>
 <p>A query on the Observation identifier is NOT supported</p>
 </td>
 </tr>
 <tr>
 <td>date</td>
 <td>date</td>
-<td></td>
 <td><p>The API also supports searching by date range - ge (Greater than or equal to)
 and le (less than or equal to)</p>
 </td>
@@ -164,28 +190,31 @@ and le (less than or equal to)</p>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
 <tr>
+<td>read</td>
+<td></td>
+</tr>
+<tr>
 <td>search-type</td>
 <td></td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>identifier</td>
-<td>token</td>
-<td></td>
+<td>patient</td>
+<td>reference</td>
 <td><p>The API supports a chained query on the patient identifier (NHI)
 This has the syntax:
-[host]/Condition?patient.identifier={system|value}</p>
-<p>If the system is absent, the NHI is assumed</p>
-<p>A query on the Observation identifier is NOT supported</p>
+[host]/Encounter?patient.identifier={system|value}</p>
+<p>If the system is absent, the NHI is assumed
+There is also support for a chained query on patient id with the syntax:
+[host]/Encounter?patient._id = {id} where {id} is the patients id</p>
 </td>
 </tr>
 <tr>
 <td>date</td>
 <td>date</td>
-<td></td>
 <td><p>The API also supports searching by date range - ge (Greater than or equal to)
 and le (less than or equal to)</p>
 </td>
@@ -197,30 +226,26 @@ and le (less than or equal to)</p>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
 <tr>
+<td>read</td>
+<td></td>
+</tr>
+<tr>
 <td>search-type</td>
 <td></td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>identifier</td>
+<td>patient</td>
 <td>token</td>
-<td></td>
 <td><p>The API supports a chained query on the patient identifier (NHI)
 This has the syntax:
-[host]/Condition?patient.identifier={system|value}</p>
-<p>If the system is absent, the NHI is assumed</p>
-<p>A query on the Observation identifier is NOT supported</p>
-</td>
-</tr>
-<tr>
-<td>date</td>
-<td>date</td>
-<td></td>
-<td><p>The API also supports searching by date range - ge (Greater than or equal to)
-and le (less than or equal to)</p>
+[host]/Immunization?patient.identifier={system|value}
+If the system is absent, the NHI is assumed</p>
+<p>There is also support for a chained query on patient id with the syntax:
+[host]/Immunization?patient._id = {id} where {id} is the patients id</p>
 </td>
 </tr>
 </table>
@@ -230,30 +255,33 @@ and le (less than or equal to)</p>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>search-type</td>
+<td>read</td>
 <td><p>The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same
 call</p>
 </td>
 </tr>
+<tr>
+<td>search-type</td>
+<td></td>
+</tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>identifier</td>
-<td>token</td>
-<td></td>
+<td>patient</td>
+<td>reference</td>
 <td><p>The API supports a chained query on the patient identifier (NHI)
 This has the syntax:
-[host]/Condition?patient.identifier={system|value}</p>
-<p>If the system is absent, the NHI is assumed</p>
-<p>A query on the Observation identifier is NOT supported</p>
+[host]/DiagnosticReport?patient.identifier={system|value}</p>
+<p>If the system is absent, the NHI is assumed
+There is also support for a chained query on patient id with the syntax:
+[host]/DiagnosticReport?patient._id = {id} where {id} is the patients id</p>
 </td>
 </tr>
 <tr>
 <td>date</td>
 <td>date</td>
-<td></td>
 <td><p>The API also supports searching by date range - ge (Greater than or equal to)
 and le (less than or equal to)</p>
 </td>
@@ -274,28 +302,31 @@ and le (less than or equal to)</p>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
 <tr>
+<td>read</td>
+<td></td>
+</tr>
+<tr>
 <td>search-type</td>
 <td></td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>identifier</td>
-<td>token</td>
-<td></td>
+<td>patient</td>
+<td>reference</td>
 <td><p>The API supports a chained query on the patient identifier (NHI)
 This has the syntax:
-[host]/Condition?patient.identifier={system|value}</p>
-<p>If the system is absent, the NHI is assumed</p>
-<p>A query on the Condition identifier is NOT supported</p>
+[host]/AllergyIntolerance?patient.identifier={system|value}</p>
+<p>If the system is absent, the NHI is assumed
+There is also support for a chained query on patient id with the syntax:
+[host]/AllergyIntolerance?patient._id = {id} where {id} is the patients id</p>
 </td>
 </tr>
 <tr>
 <td>clinical-status</td>
 <td>token</td>
-<td></td>
 <td><p>The clinical status of the Condition. Only 'active' or 'inactive' values are supported</p>
 </td>
 </tr>
@@ -329,11 +360,10 @@ This endpoint may noyt be supported</p>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
 <td>schedule</td>
 <td>reference</td>
-<td></td>
 <td><p>Used to allow the practitioner to be specified in the query using a chained request:</p>
 <p>[host]/Slot?schedule.practitioner.identifer = {}</p>
 </td>
@@ -341,7 +371,6 @@ This endpoint may noyt be supported</p>
 <tr>
 <td>start</td>
 <td>token</td>
-<td></td>
 <td><p>Allows the user to specify the date for which available slots are to be returned. A range can be
 specified using the greater than / less than modifiers</p>
 </td>
@@ -349,7 +378,6 @@ specified using the greater than / less than modifiers</p>
 <tr>
 <td>status</td>
 <td>token</td>
-<td></td>
 <td><p>Allows the user to specify the status of the slot to be specified in the query. Generally this will
 be set to 'free' to return only available slots.</p>
 </td>
@@ -385,25 +413,28 @@ need to search for appointments for a patient to get the id before deleting.</p>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td>reference</td>
-<td></td>
-<td><p>Return all appointments for a patient</p>
+<td><p>The API supports a chained query on the patient identifier (NHI)
+This has the syntax:
+[host]/Appointment?patient.identifier={system|value}</p>
+<p>If the system is absent, the NHI is assumed
+There is also support for a chained query on patient id with the syntax:
+[host]/Appointment?patient._id = {id} where {id} is the patients id</p>
 </td>
 </tr>
 <tr>
 <td>date</td>
 <td>date</td>
-<td></td>
 <td><p>Return all appointments over a date range (using ge / le modifiers). The patient must also be included.</p>
 </td>
 </tr>
 </table>
 <a name="DocumentReference"> </a>
 <h3>DocumentReference</h3>
-<div><p>Used to represent clincial notes and external documents such as Discharge Summaries. For a clincial note, the note will be
+<div><p>Used to represent clinical notes and external documents such as Discharge Summaries. For a clincial note, the note will be
 in the content.attachment.data element. For external files the url will be a reference to a Binary endpoint from where the
 document can be retrieved.</p>
 </div>
@@ -412,22 +443,32 @@ document can be retrieved.</p>
 <table class='table table-bordered table-condensed'>
 <tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
 <tr>
+<td>read</td>
+<td></td>
+</tr>
+<tr>
 <td>search-type</td>
 <td></td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
-<td>identifier</td>
-<td>token</td>
-<td></td>
+<td>patient</td>
+<td>reference</td>
 <td><p>The API supports a chained query on the patient identifier (NHI)
 This has the syntax:
 [host]/DocumentReference?patient.identifier={system|value}</p>
 <p>If the system is absent, the NHI is assumed</p>
-<p>A query on the DocumentReference identifier is NOT supported</p>
+<p>There is also support for a chained query on patient id with the syntax:
+[host]/Appointment?patient._id = {id} where {id} is the patients id</p>
+</td>
+</tr>
+<tr>
+<td>_security</td>
+<td>token</td>
+<td><p>By default, DocumentReference resources marked as confidential will not be retuned in a query. This parameter allows a user to specify that they want the confidential records. There are security and privacy constraints that must be met as well.</p>
 </td>
 </tr>
 </table>
@@ -437,6 +478,14 @@ This has the syntax:
 that refers to a discharge summary or other external document.</p>
 </div>
 <br></br>
+<strong>Interactions</strong>
+<table class='table table-bordered table-condensed'>
+<tr><th width='60%'>Code</th><th width='40%'>Documentation</th></tr>
+<tr>
+<td>read</td>
+<td></td>
+</tr>
+</table>
 <a name="Practitioner"> </a>
 <h3>Practitioner</h3>
 <div><p>Practitioner query</p>
@@ -457,25 +506,22 @@ that refers to a discharge summary or other external document.</p>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th> <th>Definition</th><th width='40%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='40%'>Documentation</th></tr>
 <tr>
 <td>name</td>
 <td>string</td>
-<td></td>
 <td><p>Not case sensitive</p>
 </td>
 </tr>
 <tr>
 <td>identifier</td>
 <td>token</td>
-<td></td>
 <td><p>Will only return active identifiers</p>
 </td>
 </tr>
 <tr>
 <td>family</td>
 <td>string</td>
-<td></td>
 <td></td>
 </tr>
 </table>

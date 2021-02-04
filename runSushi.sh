@@ -21,7 +21,7 @@ echo "Making terminology summary"
 # temp ../scripts/makeTerminologySummary.js medtech
 
 echo "Making API summary"
-# temp ../scripts/makeCapabilityStatement.js medtech
+../scripts/makeCapabilityStatement.js medtech
 
 echo "Making NamingSystem summary"
 # temp ../scripts/makeNamingSystemSummary.js medtech
