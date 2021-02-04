@@ -255,6 +255,7 @@ This has the syntax:
 [host]/Encounter?patient.identifier={system|value}
 
 If the system is absent, the NHI is assumed
+
 There is also support for a chained query on patient id with the syntax:
 [host]/Encounter?patient._id = {id} where {id} is the patients id
 """
@@ -307,12 +308,15 @@ and le (less than or equal to)
 // ============== The DiagnosticReport endpoint
 * rest.resource[6].type = #DiagnosticReport
 
+* rest.resource[6].documentation = """
+The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same
+call
+"""
 
 * rest.resource[6].interaction.code = #read
 * rest.resource[6].interaction[1].code = #search-type
 * rest.resource[6].interaction.documentation = """
-The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same
-call
+
 """
 //read by NHI
 * rest.resource[6].searchParam.name = "patient"

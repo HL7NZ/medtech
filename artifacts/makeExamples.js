@@ -45,6 +45,7 @@ let contents = fs.readFileSync(sourceFile).toString();
 let ex = JSON.parse(contents)
 //console.log(ex)
 
+ar.push("General notes")
 ar.push('<ul>')
 ex.notes.forEach(function(note){
     ar.push("<li>"+note+"</li>")
@@ -60,6 +61,11 @@ ex.queries.forEach(function(examples){
     ar.push('<a name="resource'+heading+'"> </a>')   
     ar.push("<h3>"+heading+"</h3>")
 
+
+    ar.push("<br/>")
+    ar.push(`<div><a href="capabilityStatement.html#{type}">API definition in spec</a></div>`)
+    ar.push("<br/>")
+
     if (examples.notes) {
         ar.push("<br/>")
         ar.push(examples.notes)
@@ -67,6 +73,8 @@ ex.queries.forEach(function(examples){
         ar.push("<br/>")
 
     }
+
+
 
     //ar.push("<br/><strong>Type:"+type+"</strong><br/><br/>")
 
