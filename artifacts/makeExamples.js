@@ -63,7 +63,7 @@ ex.queries.forEach(function(examples){
 
 
     ar.push("<br/>")
-    ar.push(`<div><a href="capabilityStatement.html#{type}">API definition in spec</a></div>`)
+    ar.push(`<div><a href="capabilityStatement.html#${type}">API definition in spec</a></div>`)
     ar.push("<br/>")
 
     if (examples.notes) {
