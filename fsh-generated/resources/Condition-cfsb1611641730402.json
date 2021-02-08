@@ -1,0 +1,16 @@
+{
+  "resourceType": "Condition",
+  "id": "cfsb1611641730402",
+  "subject": {
+    "reference": "Patient/cfsb1611641719249"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "195967001",
+        "system": "http://snomed.info/sct",
+        "display": "Asthma"
+      }
+    ]
+  }
+}

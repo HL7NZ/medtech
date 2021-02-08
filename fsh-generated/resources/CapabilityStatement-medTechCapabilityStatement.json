@@ -177,7 +177,7 @@
             {
               "name": "patient",
               "type": "reference",
-              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Encounter?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\nThere is also support for a chained query on patient id with the syntax:\n[host]/Encounter?patient._id = {id} where {id} is the patients id"
+              "documentation": "The API supports a chained query on the patient identifier (NHI) \nThis has the syntax:\n[host]/Encounter?patient.identifier={system|value}\n\nIf the system is absent, the NHI is assumed\n\nThere is also support for a chained query on patient id with the syntax:\n[host]/Encounter?patient._id = {id} where {id} is the patients id"
             },
             {
               "name": "date",
@@ -207,10 +207,11 @@
         },
         {
           "type": "DiagnosticReport",
+          "documentation": "The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same\ncall",
           "interaction": [
             {
               "code": "read",
-              "documentation": "The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same\ncall"
+              "documentation": ""
             },
             {
               "code": "search-type"

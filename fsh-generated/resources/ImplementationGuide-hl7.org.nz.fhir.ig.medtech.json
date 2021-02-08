@@ -156,6 +156,22 @@
       },
       {
         "reference": {
+          "reference": "Patient/cfsb1611641719249"
+        },
+        "name": "cfsb1611641719249",
+        "description": "Patient1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/cfsb1611641730402"
+        },
+        "name": "cfsb1611641730402",
+        "description": "Condition1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/medTechCapabilityStatement"
         },
         "name": "CapabilityStatement",

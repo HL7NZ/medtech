@@ -16,7 +16,7 @@ the data. It is the responsibility of the client to perform any aggregation and 
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
 <td><p>Used to retrieve a Patient resource by Id.</p>
@@ -25,7 +25,7 @@ the data. It is the responsibility of the client to perform any aggregation and 
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>name</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#string">string</a></td>
@@ -57,7 +57,7 @@ the data. It is the responsibility of the client to perform any aggregation and 
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
 <td><p>how to do 'since'</p>
@@ -66,7 +66,7 @@ the data. It is the responsibility of the client to perform any aggregation and 
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
@@ -99,19 +99,19 @@ in the resource as an extension.</p>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td></td>
+<td>Supports retrieving a resource by its id. Will return a single resource.</td>
 </tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
@@ -151,19 +151,19 @@ and for screening data.</p>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td></td>
+<td>Supports retrieving a resource by its id. Will return a single resource.</td>
 </tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
@@ -188,27 +188,27 @@ and le (less than or equal to)</p>
 <h3>Encounter</h3>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td></td>
+<td>Supports retrieving a resource by its id. Will return a single resource.</td>
 </tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
 <td><p>The API supports a chained query on the patient identifier (NHI)
 This has the syntax:
 [host]/Encounter?patient.identifier={system|value}</p>
-<p>If the system is absent, the NHI is assumed
-There is also support for a chained query on patient id with the syntax:
+<p>If the system is absent, the NHI is assumed</p>
+<p>There is also support for a chained query on patient id with the syntax:
 [host]/Encounter?patient._id = {id} where {id} is the patients id</p>
 </td>
 </tr>
@@ -224,19 +224,19 @@ and le (less than or equal to)</p>
 <h3>Immunization</h3>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td></td>
+<td>Supports retrieving a resource by its id. Will return a single resource.</td>
 </tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#token">token</a></td>
@@ -251,23 +251,25 @@ If the system is absent, the NHI is assumed</p>
 </table>
 <a name="DiagnosticReport"> </a>
 <h3>DiagnosticReport</h3>
+<div><p>The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same
+call</p>
+</div>
+<br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td><p>The search queries support the _include value of 'result' to allow the Observation resources to be returned in the same
-call</p>
-</td>
+<td>Supports retrieving a resource by its id. Will return a single resource.</td>
 </tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
@@ -300,19 +302,19 @@ and le (less than or equal to)</p>
 <h3>AllergyIntolerance</h3>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td></td>
+<td>Supports retrieving a resource by its id. Will return a single resource.</td>
 </tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
@@ -339,10 +341,10 @@ This endpoint may noyt be supported</p>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <a name="Slot"> </a>
@@ -352,15 +354,15 @@ This endpoint may noyt be supported</p>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>schedule</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
@@ -390,7 +392,7 @@ be set to 'free' to return only available slots.</p>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>search-type</td>
 <td><p>Allows appointments to be queried. Note that the are security / privacy constraints that will
@@ -413,7 +415,7 @@ need to search for appointments for a patient to get the id before deleting.</p>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
@@ -441,19 +443,19 @@ document can be retrieved.</p>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td></td>
+<td>Supports retrieving a resource by its id. Will return a single resource.</td>
 </tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
@@ -480,10 +482,10 @@ that refers to a discharge summary or other external document.</p>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
-<td></td>
+<td>Supports retrieving a resource by its id. Will return a single resource.</td>
 </tr>
 </table>
 <a name="Practitioner"> </a>
@@ -493,7 +495,7 @@ that refers to a discharge summary or other external document.</p>
 <br></br>
 <strong>Interactions</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='40%'>Code</th><th width='60%'>Documentation</th></tr>
+<tr><th width='30%'>Code</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>read</td>
 <td><p>Used to retrieve a Practitioner resource by Id.</p>
@@ -501,12 +503,12 @@ that refers to a discharge summary or other external document.</p>
 </tr>
 <tr>
 <td>search-type</td>
-<td></td>
+<td>Queries against the resource type. Will return a Bundle (even if there are no matching resources).</td>
 </tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
-<tr><th width='15%'>Name</th><th>Type</th><th width='60%'>Documentation</th></tr>
+<tr><th width='15%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
 <tr>
 <td>name</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#string">string</a></td>
