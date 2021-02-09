@@ -3,7 +3,7 @@
 <a name="Condition"> </a>
 <h3>Condition</h3>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Description</th><th width='70%'>Id</th></tr>
+<tr><th width='30%'>Description</th><th width='20%'>Id</th></tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/Condition-cfsb1610999217416.html'>Asthma as a long term condition</a></td>
 <td>cfsb1610999217416</td>
@@ -12,7 +12,7 @@
 <a name="Patient"> </a>
 <h3>Patient</h3>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Description</th><th width='70%'>Id</th></tr>
+<tr><th width='30%'>Description</th><th width='20%'>Id</th></tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/Patient-cfsb1610999277413.html'>Patient Mouse</a></td>
 <td>cfsb1610999277413</td>
@@ -21,7 +21,7 @@
 <a name="MedicationRequest"> </a>
 <h3>MedicationRequest</h3>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Description</th><th width='70%'>Id</th></tr>
+<tr><th width='30%'>Description</th><th width='20%'>Id</th></tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/MedicationRequest-cfsb1612836756572.html'>Largactil prescription</a></td>
 <td>cfsb1612836756572</td>
@@ -30,7 +30,7 @@
 <a name="Practitioner"> </a>
 <h3>Practitioner</h3>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Description</th><th width='70%'>Id</th></tr>
+<tr><th width='30%'>Description</th><th width='20%'>Id</th></tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/Practitioner-cfsb1612836952016.html'>Gerald GP</a></td>
 <td>cfsb1612836952016</td>
@@ -43,7 +43,7 @@
 <a name="Observation"> </a>
 <h3>Observation</h3>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Description</th><th width='70%'>Id</th></tr>
+<tr><th width='30%'>Description</th><th width='20%'>Id</th></tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/Observation-cfsb1612837065339.html'>Blood Pressure</a></td>
 <td>cfsb1612837065339</td>
@@ -56,7 +56,7 @@
 <a name="Schedule"> </a>
 <h3>Schedule</h3>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Description</th><th width='70%'>Id</th></tr>
+<tr><th width='30%'>Description</th><th width='20%'>Id</th></tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/Schedule-sched1.html'>Schedule1</a></td>
 <td>sched1</td>
@@ -65,7 +65,7 @@
 <a name="Slot"> </a>
 <h3>Slot</h3>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Description</th><th width='70%'>Id</th></tr>
+<tr><th width='30%'>Description</th><th width='20%'>Id</th></tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/Slot-slot1.html'>Slot1</a></td>
 <td>slot1</td>
