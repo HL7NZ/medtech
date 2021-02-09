@@ -31,6 +31,7 @@ menu:
   IG Home: index.html
   API: capabilityStatement.html
   Example queries: exampleQueries.html
+  Example resources: exampleInstances.html
   Extensions: extensions.html
   Profiles: profiles.html
   Artifact Index: artifacts.html

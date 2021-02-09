@@ -1,6 +1,6 @@
 {
   "resourceType": "CapabilityStatement",
-  "id": "medTechCapabilityStatement",
+  "id": "medTech",
   "jurisdiction": [
     {
       "coding": [
@@ -17,7 +17,7 @@
   },
   "name": "medTech_CapabilityStatement",
   "title": "Capability Statement describing medTech FHIR APIs",
-  "url": "http://hl7.org.nz/fhir/ig/medtech",
+  "url": "http://hl7.org.nz/fhir/ig/medTech",
   "description": "This is the computable resource that describes the FHIR compliant RESTful endpoint exposed by the ALEX infrastructure\n\nNote that all API interactions will be routed to a single Practice Management System as ALEX is effectively\na facade layer in front of each PMS - ie it is not an aggregator accross different PMS systems. This means that if\nthere is data about a single patient in different PMS's tthen a call will be required to each one to retrieve all\nthe data. It is the responsibility of the client to perform any aggregation and de-duplication.\n\nRefer to the spec for details on the [API](http://hl7.org/fhir/http.html) and \n[search](http://hl7.org/fhir/search.html), though note that this API supports only a subset of the defined queries.\n",
   "date": "2020-04-01",
   "status": "draft",

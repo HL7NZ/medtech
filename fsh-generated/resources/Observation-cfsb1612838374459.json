@@ -1,0 +1,22 @@
+{
+  "resourceType": "Observation",
+  "id": "cfsb1612838374459",
+  "subject": {
+    "reference": "Patient/cfsb1610999277413"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "14682-9",
+        "system": "http://loinc.org",
+        "display": "Creatinine [Moles/volume] in Serum or Plasma"
+      }
+    ]
+  },
+  "effectiveDateTime": "2021-02-07T13:28:17Z",
+  "valueQuantity": {
+    "value": 0.9,
+    "unit": "mg/dL"
+  }
+}

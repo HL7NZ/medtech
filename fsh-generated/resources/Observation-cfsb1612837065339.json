@@ -1,0 +1,55 @@
+{
+  "resourceType": "Observation",
+  "id": "cfsb1612837065339",
+  "subject": {
+    "reference": "Patient/cfsb1610999277413"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "85354-9",
+        "system": "http://loinc.org",
+        "display": "Blood pressure"
+      }
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/cfsb1612836952016"
+    }
+  ],
+  "effectiveDateTime": "2021-02-07T13:28:17Z",
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "8480-6",
+            "system": "http://loinc.org",
+            "display": "Systolic"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 120,
+        "unit": "mm[Hg]"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "8462-4",
+            "system": "http://loinc.org",
+            "display": "Diastolic"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 80,
+        "unit": "mm[Hg]"
+      }
+    }
+  ]
+}

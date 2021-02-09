@@ -17,13 +17,16 @@ then
 echo "Creating Profiles and extensions summary pages..."
 ../scripts/makeProfilesAndExtensions.js medtech
 
-echo "Making terminology summary"  
+# echo "Making terminology summary"  
 # temp ../scripts/makeTerminologySummary.js medtech
 
 echo "Making API summary"
 ../scripts/makeCapabilityStatement.js medtech
 
-echo "Making NamingSystem summary"
+echo "Making examples"
+../scripts/makeExamplePage.js medtech
+
+# echo "Making NamingSystem summary"
 # temp ../scripts/makeNamingSystemSummary.js medtech
 
 

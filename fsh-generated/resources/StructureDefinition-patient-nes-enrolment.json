@@ -38,11 +38,6 @@
   "differential": {
     "element": [
       {
-        "id": "Extension",
-        "path": "Extension",
-        "definition": "An extension applied to PractitionerRole to indicate that itr is referring to the Patient enrollment with a GP Practice under the NES (National Enrolment Service)"
-      },
-      {
         "id": "Extension.extension",
         "path": "Extension.extension",
         "max": "0"

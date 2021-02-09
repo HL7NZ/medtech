@@ -1,25 +1,84 @@
 {
   "resourceType": "Patient",
   "id": "cfsb1610999277413",
-  "meta": {
-    "profile": [
-      "http://hl7.org.nz/fhir/StructureDefinition/mtPatient"
-    ]
-  },
-  "name": [
-    {
-      "given": [
-        "John"
-      ],
-      "family": "Doe"
-    }
-  ],
-  "gender": "male",
-  "birthDate": "1989-01-18",
   "identifier": [
     {
       "system": "https://standards.digital.health.nz/ns/nhi-id",
-      "value": "ABC1234"
+      "value": "AAB2456"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Patient"
+      ],
+      "family": "Mouse"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1968-12-14",
+  "address": [
+    {
+      "text": "South East Auckland",
+      "type": "physical",
+      "line": [
+        "South",
+        "East",
+        "Auckland"
+      ],
+      "city": "Auckland",
+      "postalCode": "1234"
+    },
+    {
+      "text": "South East Auckland",
+      "type": "postal",
+      "line": [
+        "South",
+        "East",
+        "Auckland"
+      ],
+      "city": "Auckland",
+      "postalCode": "1234"
+    }
+  ],
+  "contact": [
+    {
+      "relationship": [
+        {
+          "coding": [
+            {
+              "code": "U",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "display": "Unknown"
+            }
+          ]
+        }
+      ],
+      "name": {
+        "given": [
+          "FIRSTNAME"
+        ],
+        "family": "SURNAME"
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "021873313",
+          "use": "home"
+        },
+        {
+          "system": "phone",
+          "value": "021837312",
+          "use": "work"
+        }
+      ],
+      "address": {
+        "type": "physical",
+        "line": [
+          "Suburb"
+        ],
+        "city": "City"
+      }
     }
   ]
 }

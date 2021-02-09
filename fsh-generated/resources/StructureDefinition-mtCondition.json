@@ -157,11 +157,6 @@
         "min": 1
       },
       {
-        "id": "Condition.recorder",
-        "path": "Condition.recorder",
-        "min": 1
-      },
-      {
         "id": "Condition.asserter",
         "path": "Condition.asserter",
         "max": "0"

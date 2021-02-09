@@ -1,7 +1,7 @@
 
 Alias: $example = http://cf/ex
 
-Instance:   medTechCapabilityStatement
+Instance:   medTech
 InstanceOf: CapabilityStatement
 Title:          "CapabilityStatement"
 Description:    "Represents API exposed by medTech"
@@ -14,7 +14,7 @@ Usage: #definition
 
 * name = "medTech_CapabilityStatement"
 * title = "Capability Statement describing medTech FHIR APIs"
-* url = "http://hl7.org.nz/fhir/ig/medtech"
+* url = "http://hl7.org.nz/fhir/ig/medTech"
 * description = """
 This is the computable resource that describes the FHIR compliant RESTful endpoint exposed by the ALEX infrastructure
 

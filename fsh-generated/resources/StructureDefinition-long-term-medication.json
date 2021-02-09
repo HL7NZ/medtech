@@ -38,11 +38,6 @@
   "differential": {
     "element": [
       {
-        "id": "Extension",
-        "path": "Extension",
-        "definition": "If true, then this is a long term MedicationRequest"
-      },
-      {
         "id": "Extension.extension",
         "path": "Extension.extension",
         "max": "0"

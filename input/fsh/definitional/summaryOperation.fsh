@@ -1,6 +1,6 @@
 Instance: summary
 InstanceOf: OperationDefinition
-Description: "OperationDefinition1"
+Description: "Patient Summary"
 Usage: #example
 
 //https://chat.fhir.org/#narrow/stream/207835-IPS/topic/Query.20for.20IPS.20retrieval
@@ -40,27 +40,42 @@ IPS will define a profile on Bundle with the URL in the example above, so that a
 """
 
 * instance = true
-* type = false
+* type = true
 * system = false
 * resource = #Patient
-* parameter.name = #graph
-* parameter.use = #in
-* parameter.min = 0
-* parameter.max = "1"
-* parameter.documentation = """
 
+* parameter[0].name = #identifier
+* parameter[0].type = #Identifier
+//* parameter[0].searchType = #uri
+* parameter[0].use = #in
+* parameter[0].min = 0
+* parameter[0].max = "1"
+* parameter[0].documentation = """
+The identifier of the patient which is the target. Used when the operation is invoked
+against the Patient type, ignored if invoked against a Patient instance
 """
-* parameter[1].type = #uri
-* parameter[1].searchType = #uri
+
+
+
 
 * parameter[1].name = #profile
+* parameter[1].type = #uri
+//* parameter[1].searchType = #uri
 * parameter[1].use = #in
 * parameter[1].min = 0
 * parameter[1].max = "1"
 * parameter[1].documentation = """
 
 """
-* parameter[1].type = #uri
-* parameter[1].searchType = #uri
 
 
+* parameter[2].name = #graph
+* parameter[2].type = #uri
+* parameter[2].use = #in
+* parameter[2].min = 0
+* parameter[2].max = "1"
+* parameter[2].documentation = """
+Used when the url for a GraphDefinition resource is passed in that 
+explicitely defines the contents of the 
+bundle returned. 
+"""

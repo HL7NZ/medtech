@@ -144,35 +144,51 @@
         },
         "name": "cfsb1610999217416",
         "description": "Asthma as a long term condition",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MtCondition"
       },
       {
         "reference": {
           "reference": "Patient/cfsb1610999277413"
         },
         "name": "cfsb1610999277413",
-        "description": "Patient1",
-        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/mtPatient"
-      },
-      {
-        "reference": {
-          "reference": "Patient/cfsb1611641719249"
-        },
-        "name": "cfsb1611641719249",
-        "description": "Patient1",
+        "description": "Patient Mouse",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Condition/cfsb1611641730402"
+          "reference": "MedicationRequest/cfsb1612836756572"
         },
-        "name": "cfsb1611641730402",
-        "description": "Condition1",
+        "name": "cfsb1612836756572",
+        "description": "Largactil prescription",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/medTechCapabilityStatement"
+          "reference": "Practitioner/cfsb1612836952016"
+        },
+        "name": "cfsb1612836952016",
+        "description": "Gerald GP",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/cfsb1612837065339"
+        },
+        "name": "cfsb1612837065339",
+        "description": "Blood Pressure",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/cfsb1612838374459"
+        },
+        "name": "cfsb1612838374459",
+        "description": "Creatinine",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/medTech"
         },
         "name": "CapabilityStatement",
         "description": "Represents API exposed by medTech",
@@ -215,7 +231,7 @@
           "reference": "OperationDefinition/summary"
         },
         "name": "summary",
-        "description": "OperationDefinition1",
+        "description": "Patient Summary",
         "exampleBoolean": true
       }
     ],
@@ -232,6 +248,11 @@
         {
           "nameUrl": "capabilityStatement.html",
           "title": "Capability Statement",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "exampleInstances.html",
+          "title": "Example Instances",
           "generation": "html"
         },
         {

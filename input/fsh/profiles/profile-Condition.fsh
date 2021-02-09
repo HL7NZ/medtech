@@ -31,7 +31,7 @@ Description:    "The Condition resource exposed by the ALEX infrastructure."
 * code 1..1
 * subject 1..1
 * recordedDate 1..1
-* recorder 1..1
+//* recorder 1..1
 
 * extension contains
     $ltc named long-term-condition 0..1 and

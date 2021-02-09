@@ -1,0 +1,32 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "cfsb1612836756572",
+  "subject": {
+    "reference": "Patient/cfsb1610999277413"
+  },
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "code": "387258005",
+        "system": "http://snomed.info/sct",
+        "display": "Chlorpromazine"
+      }
+    ]
+  },
+  "authoredOn": "2020-10-20",
+  "dispenseRequest": {
+    "numberOfRepeatsAllowed": 15,
+    "quantity": {
+      "value": 5,
+      "unit": "tab"
+    }
+  },
+  "requester": {
+    "reference": "Practitioner/cfsb1612836952016"
+  },
+  "recorder": {
+    "reference": "Practitioner/cfsb1612836952016"
+  }
+}
