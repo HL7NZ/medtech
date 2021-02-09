@@ -1,14 +1,6 @@
 {
   "resourceType": "Condition",
   "id": "cfsb1610999217416",
-  "meta": {
-    "profile": [
-      "http://hl7.org.nz/fhir/StructureDefinition/MtCondition"
-    ]
-  },
-  "subject": {
-    "reference": "Patient/cfsb1610999277413"
-  },
   "extension": [
     {
       "url": "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition",
@@ -19,6 +11,9 @@
       "valueBoolean": true
     }
   ],
+  "subject": {
+    "reference": "Patient/cfsb1610999277413"
+  },
   "clinicalStatus": {
     "coding": [
       {

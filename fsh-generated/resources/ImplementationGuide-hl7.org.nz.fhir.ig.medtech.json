@@ -143,8 +143,8 @@
           "reference": "Condition/cfsb1610999217416"
         },
         "name": "cfsb1610999217416",
-        "description": "Asthma as a long term condition",
-        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MtCondition"
+        "description": "Asthma",
+        "exampleBoolean": true
       },
       {
         "reference": {

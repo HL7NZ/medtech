@@ -120,7 +120,7 @@ Usage: #example
 * status = #final
 * code = http://loinc.org#85354-9 "Blood pressure"
 
- // Reference to Practitioner: Gerald GP
+// Reference to Practitioner: Gerald GP
 * performer = Reference(cfsb1612836952016)
 * effectiveDateTime = "2021-02-07T13:28:17Z"
 
@@ -133,6 +133,7 @@ Usage: #example
 * component[1].code = http://loinc.org#8462-4 "Diastolic"
 * component[1].valueQuantity.value = 80
 * component[1].valueQuantity.unit = "mm[Hg]"
+
 
 Instance: cfsb1612838374459
 InstanceOf: Observation
