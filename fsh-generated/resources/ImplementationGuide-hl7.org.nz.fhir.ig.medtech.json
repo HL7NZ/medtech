@@ -36,6 +36,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/mtAllergyIntolerance"
+        },
+        "name": "AllergyIntolerance profile",
+        "description": "The AllergyIntolerance resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mtCondition"
         },
         "name": "Condition profile",
@@ -184,6 +192,14 @@
         },
         "name": "cfsb1612838374459",
         "description": "Creatinine",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/cfsb1612908776253"
+        },
+        "name": "cfsb1612908776253",
+        "description": "AllergyIntolerance1",
         "exampleBoolean": true
       },
       {

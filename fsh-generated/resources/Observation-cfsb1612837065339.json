@@ -17,6 +17,9 @@
   "performer": [
     {
       "reference": "Practitioner/cfsb1612836952016"
+    },
+    {
+      "reference": "Practitioner/cfsb1612836952016"
     }
   ],
   "effectiveDateTime": "2021-02-07T13:28:17Z",

@@ -120,7 +120,7 @@ Usage: #example
 * status = #final
 * code = http://loinc.org#85354-9 "Blood pressure"
 
-// Reference to Practitioner: Gerald GP
+ // Reference to Practitioner: Gerald GP
 * performer = Reference(cfsb1612836952016)
 * effectiveDateTime = "2021-02-07T13:28:17Z"
 
@@ -133,7 +133,8 @@ Usage: #example
 * component[1].code = http://loinc.org#8462-4 "Diastolic"
 * component[1].valueQuantity.value = 80
 * component[1].valueQuantity.unit = "mm[Hg]"
-
+// Reference to Practitioner: Gerald GP
+* performer[1] = Reference(cfsb1612836952016)
 
 Instance: cfsb1612838374459
 InstanceOf: Observation
@@ -149,4 +150,22 @@ Usage: #example
 
 * valueQuantity.value = 0.9
 * valueQuantity.unit = "mg/dL"
+
+Instance: cfsb1612908776253
+InstanceOf: AllergyIntolerance
+Description: "AllergyIntolerance1"
+Usage: #example
+ 
+// Reference to Patient: Patient Mouse
+* patient = Reference(cfsb1610999277413)
+// Reference to Practitioner: Gerald GP
+* asserter = Reference(cfsb1612836952016)
+// Reference to Practitioner: Gerald GP
+* recorder = Reference(cfsb1612836952016)
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active "Active"
+* verificationStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification#confirmed "Confirmed"
+* category = #medication
+* code = http://snomed.info/sct#764146007 "Penicillin"
+* onsetDateTime = "2020-02"
+* note.text = "itchy rash"
 

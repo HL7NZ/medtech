@@ -4,6 +4,11 @@
 <table class='table table-bordered table-hover table-sm'>
 <tr><th>Id</th><th>Url</th><th>Description</th></tr>
 <tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtAllergyIntolerance.html'>mtAllergyIntolerance</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/MtAllergyIntolerance</td>
+<td>The AllergyIntolerance resource exposed by the ALEX infrastructure.</td>
+</tr>
+<tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtCondition.html'>mtCondition</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtCondition</td>
 <td>The Condition resource exposed by the ALEX infrastructure.</td>

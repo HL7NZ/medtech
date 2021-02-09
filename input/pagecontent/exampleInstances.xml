@@ -4,7 +4,12 @@
 <strong class='clearfix'>Alphabetical by description </strong>
 <br/>
 <table class='table table-bordered table-condensed'>
-<tr><th width='30%'>Description</th><th width='20%'>Id</th><th width='20%'>Type</th></tr>
+<tr><th width='30%'>Description</th><th width='20%'>Type</th><th width='20%'>Id</th></tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/AllergyIntolerance-cfsb1612908776253.html'>AllergyIntolerance1</a></td>
+<td>AllergyIntolerance</td>
+<td>cfsb1612908776253</td>
+</tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/Condition-cfsb1610999217416.html'>Asthma</a></td>
 <td>Condition</td>
@@ -58,7 +63,7 @@
 </table>
 <br/>
 <br/>
-<strong>Resources by type</strong>
+<div><strong>Resources by type</strong></div>
 <br/>
 <a name="Condition"> </a>
 <h3>Condition</h3>
@@ -111,6 +116,15 @@
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/Observation-cfsb1612838374459.html'>Creatinine</a></td>
 <td>cfsb1612838374459</td>
+</tr>
+</table>
+<a name="AllergyIntolerance"> </a>
+<h3>AllergyIntolerance</h3>
+<table class='table table-bordered table-condensed'>
+<tr><th width='30%'>Description</th><th width='20%'>Id</th></tr>
+<tr>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/AllergyIntolerance-cfsb1612908776253.html'>AllergyIntolerance1</a></td>
+<td>cfsb1612908776253</td>
 </tr>
 </table>
 <a name="Schedule"> </a>

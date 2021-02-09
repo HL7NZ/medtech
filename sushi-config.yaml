@@ -39,4 +39,5 @@ menu:
  
 
   Support:
+    "Swagger files" : medTech.openapi.json
     "FHIR Spec ": "{{site.data.fhir.path}}index.html"
