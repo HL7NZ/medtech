@@ -1,0 +1,152 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mtAppointment",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MedTech Appointment profile</div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Base.Workflow"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/MtAppointment",
+  "version": "0.1.0",
+  "name": "MtAppointment",
+  "title": "Appointment profile",
+  "status": "active",
+  "description": "The Appointment resource exposed by the ALEX infrastructure.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "purpose": "The Appointment resource exposed by the ALEX infrastructure.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "ical",
+      "uri": "http://ietf.org/rfc/2445",
+      "name": "iCalendar"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Appointment",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Appointment.identifier",
+        "path": "Appointment.identifier",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.cancelationReason",
+        "path": "Appointment.cancelationReason",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.serviceCategory",
+        "path": "Appointment.serviceCategory",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.serviceType",
+        "path": "Appointment.serviceType",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.specialty",
+        "path": "Appointment.specialty",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.appointmentType",
+        "path": "Appointment.appointmentType",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.reasonCode",
+        "path": "Appointment.reasonCode",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.reasonReference",
+        "path": "Appointment.reasonReference",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.priority",
+        "path": "Appointment.priority",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.description",
+        "path": "Appointment.description",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.supportingInformation",
+        "path": "Appointment.supportingInformation",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.minutesDuration",
+        "path": "Appointment.minutesDuration",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.slot",
+        "path": "Appointment.slot",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.created",
+        "path": "Appointment.created",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.patientInstruction",
+        "path": "Appointment.patientInstruction",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.basedOn",
+        "path": "Appointment.basedOn",
+        "max": "0"
+      }
+    ]
+  }
+}

@@ -44,10 +44,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mtAppointment"
+        },
+        "name": "Appointment profile",
+        "description": "The Appointment resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mtCondition"
         },
         "name": "Condition profile",
         "description": "The Condition resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mtDiagnosticReport"
+        },
+        "name": "DiagnosticReport profile",
+        "description": "The DiagnosticReport resource exposed by the ALEX infrastructure.",
         "exampleBoolean": false
       },
       {
@@ -76,6 +92,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mtLocation"
+        },
+        "name": "Location profile",
+        "description": "The Location resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mtMedicationRequest"
         },
         "name": "MedicationRequest profile",
@@ -100,10 +124,34 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mtPractitioner"
+        },
+        "name": "Practitioner profile",
+        "description": "The Practitioner resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mtSchedule"
+        },
+        "name": "Schedule profile",
+        "description": "The Schedule resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mtScreening-observation"
         },
         "name": "Screening Observation profile",
         "description": "The Observation to use when exposing screening data",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mtSlot"
+        },
+        "name": "Slot profile",
+        "description": "The Slot resource exposed by the ALEX infrastructure.",
         "exampleBoolean": false
       },
       {

@@ -1,0 +1,77 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mtSlot",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MedTech Slot profile</div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Base.Workflow"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "business"
+    }
+  ],
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/MtSlot",
+  "version": "0.1.0",
+  "name": "MtSlot",
+  "title": "Slot profile",
+  "status": "active",
+  "description": "The Slot resource exposed by the ALEX infrastructure.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "purpose": "The Slot resource exposed by the ALEX infrastructure.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "ical",
+      "uri": "http://ietf.org/rfc/2445",
+      "name": "iCalendar"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Slot",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Slot",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Slot.serviceType",
+        "path": "Slot.serviceType",
+        "max": "0"
+      },
+      {
+        "id": "Slot.specialty",
+        "path": "Slot.specialty",
+        "max": "0"
+      },
+      {
+        "id": "Slot.appointmentType",
+        "path": "Slot.appointmentType",
+        "max": "0"
+      }
+    ]
+  }
+}
