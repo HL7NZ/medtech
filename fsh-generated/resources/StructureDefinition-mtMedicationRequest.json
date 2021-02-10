@@ -67,16 +67,16 @@
         }
       },
       {
-        "id": "MedicationRequest.extension:long-term-medication",
+        "id": "MedicationRequest.extension:nzeps-long-term-medication",
         "path": "MedicationRequest.extension",
-        "sliceName": "long-term-medication",
+        "sliceName": "nzeps-long-term-medication",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/long-term-medication"
+              "http://hl7.org.nz/fhir/StructureDefinition/nzeps-long-term-medication"
             ]
           }
         ]

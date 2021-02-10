@@ -1,4 +1,4 @@
-Alias: $ltm = http://hl7.org.nz/fhir/StructureDefinition/long-term-medication
+Alias: $ltm = http://hl7.org.nz/fhir/StructureDefinition/nzeps-long-term-medication
 
 
 Profile:        MtMedicationRequest
@@ -7,9 +7,7 @@ Id:             mtMedicationRequest
 Title:          "MedicationRequest profile"
 Description:    "The MedicationRequest resource exposed by the ALEX infrastructure."
 
-
 //elements not supported
-
 * identifier 0..0
 * statusReason 0..0
 * category 0..0
@@ -51,4 +49,4 @@ Description:    "The MedicationRequest resource exposed by the ALEX infrastructu
 * eventHistory 0..0
 
 * extension contains
-    $ltm named long-term-medication 0..1 
+    $ltm named nzeps-long-term-medication 0..1 

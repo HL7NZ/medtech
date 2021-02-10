@@ -116,10 +116,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/long-term-medication"
+          "reference": "StructureDefinition/nzeps-long-term-medication"
         },
-        "name": "LongTermMedication",
-        "description": "If true, then this is a long term MedicationRequest",
+        "name": "NzepsLongTermMedication",
+        "description": "If true, then this is a long term MedicationRequest. The extension is defined external to this IG, but included for completeness.",
         "exampleBoolean": false
       },
       {

@@ -19,12 +19,12 @@
 <td>If true, then this is a long term condition</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-long-term-medication.html'>long-term-medication</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/long-term-medication</td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-nzeps-long-term-medication.html'>nzeps-long-term-medication</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/nzeps-long-term-medication</td>
 <td>
 <div>MedicationRequest</div>
 </td>
-<td>If true, then this is a long term MedicationRequest</td>
+<td>If true, then this is a long term MedicationRequest. The extension is defined external to this IG, but included for completeness.</td>
 </tr>
 <tr>
 <td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-patient-nes-enrolment.html'>patient-nes-enrolment</a></td>
