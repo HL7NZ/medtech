@@ -84,6 +84,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mtMedicationStatement"
+        },
+        "name": "MedicationStatement profile",
+        "description": "The MedicationStatement resource exposed by the ALEX infrastructure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mtPatient"
         },
         "name": "Patient profile",

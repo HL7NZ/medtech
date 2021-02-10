@@ -1,0 +1,167 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mtMedicationStatement",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MedTech MedicationStatement profile</div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Medications"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/MtMedicationStatement",
+  "version": "0.1.0",
+  "name": "MtMedicationStatement",
+  "title": "MedicationStatement profile",
+  "status": "active",
+  "description": "The MedicationStatement resource exposed by the ALEX infrastructure.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "purpose": "The MedicationStatement resource exposed by the ALEX infrastructure.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationStatement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationStatement.basedOn",
+        "path": "MedicationStatement.basedOn",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.partOf",
+        "path": "MedicationStatement.partOf",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.statusReason",
+        "path": "MedicationStatement.statusReason",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.category",
+        "path": "MedicationStatement.category",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.context",
+        "path": "MedicationStatement.context",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.informationSource",
+        "path": "MedicationStatement.informationSource",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.derivedFrom",
+        "path": "MedicationStatement.derivedFrom",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.reasonCode",
+        "path": "MedicationStatement.reasonCode",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.note",
+        "path": "MedicationStatement.note",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.sequence",
+        "path": "MedicationStatement.dosage.sequence",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.additionalInstruction",
+        "path": "MedicationStatement.dosage.additionalInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.patientInstruction",
+        "path": "MedicationStatement.dosage.patientInstruction",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.timing",
+        "path": "MedicationStatement.dosage.timing",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.site",
+        "path": "MedicationStatement.dosage.site",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.route",
+        "path": "MedicationStatement.dosage.route",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.method",
+        "path": "MedicationStatement.dosage.method",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.doseAndRate",
+        "path": "MedicationStatement.dosage.doseAndRate",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.maxDosePerPeriod",
+        "path": "MedicationStatement.dosage.maxDosePerPeriod",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.maxDosePerAdministration",
+        "path": "MedicationStatement.dosage.maxDosePerAdministration",
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement.dosage.maxDosePerLifetime",
+        "path": "MedicationStatement.dosage.maxDosePerLifetime",
+        "max": "0"
+      }
+    ]
+  }
+}

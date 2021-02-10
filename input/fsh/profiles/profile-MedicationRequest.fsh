@@ -7,6 +7,13 @@ Id:             mtMedicationRequest
 Title:          "MedicationRequest profile"
 Description:    "The MedicationRequest resource exposed by the ALEX infrastructure."
 
+* ^url = "http://hl7.org.nz/fhir/StructureDefinition/MtMedicationRequest"
+* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
+
+* ^purpose = "The MedicationRequest resource exposed by the ALEX infrastructure."
+* ^text.status = #additional
+* ^text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>MedTech MedicationRequest profile</div>"
+
 //elements not supported
 * identifier 0..0
 * statusReason 0..0

@@ -1,6 +1,10 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mtMedicationRequest",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">MedTech MedicationRequest profile</div>"
+  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +15,23 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://hl7.org.nz/fhir/ig/medtech/StructureDefinition/mtMedicationRequest",
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/MtMedicationRequest",
   "version": "0.1.0",
   "name": "MtMedicationRequest",
   "title": "MedicationRequest profile",
   "status": "active",
   "description": "The MedicationRequest resource exposed by the ALEX infrastructure.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NZ",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "purpose": "The MedicationRequest resource exposed by the ALEX infrastructure.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
