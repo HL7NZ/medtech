@@ -4,77 +4,77 @@
 <table class='table table-bordered table-hover table-sm'>
 <tr><th>Id</th><th>Url</th><th>Description</th></tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtAllergyIntolerance.html'>mtAllergyIntolerance</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtAllergyIntolerance.html'>mtAllergyIntolerance</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtAllergyIntolerance</td>
 <td>The AllergyIntolerance resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtAppointment.html'>mtAppointment</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtAppointment.html'>mtAppointment</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtAppointment</td>
 <td>The Appointment resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtCondition.html'>mtCondition</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtCondition.html'>mtCondition</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtCondition</td>
 <td>The Condition resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtDiagnosticReport.html'>mtDiagnosticReport</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtDiagnosticReport.html'>mtDiagnosticReport</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtDiagnosticReport</td>
 <td>The DiagnosticReport resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtDocumentReference.html'>mtDocumentReference</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtDocumentReference.html'>mtDocumentReference</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/mtDocumentReference</td>
 <td>The DocumentReference resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtImmunization.html'>mtImmunization</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtImmunization.html'>mtImmunization</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/mtImmunization</td>
 <td>The Immunization resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtLab-observation.html'>mtLab-observation</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtLab-observation.html'>mtLab-observation</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/mtLab-observation</td>
 <td>The Observation to use when exposing laboratory data</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtLocation.html'>mtLocation</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtLocation.html'>mtLocation</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtLocation</td>
 <td>The Location resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtMedicationRequest.html'>mtMedicationRequest</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtMedicationRequest.html'>mtMedicationRequest</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtMedicationRequest</td>
 <td>The MedicationRequest resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtMedicationStatement.html'>mtMedicationStatement</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtMedicationStatement.html'>mtMedicationStatement</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtMedicationStatement</td>
 <td>The MedicationStatement resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtPatient.html'>mtPatient</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtPatient.html'>mtPatient</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/mtPatient</td>
 <td>The Patient resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtPractitioner.html'>mtPractitioner</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtPractitioner.html'>mtPractitioner</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtPractitioner</td>
 <td>The Practitioner resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtSchedule.html'>mtSchedule</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtSchedule.html'>mtSchedule</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtSchedule</td>
 <td>The Schedule resource exposed by the ALEX infrastructure.</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtScreening-observation.html'>mtScreening-observation</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtScreening-observation.html'>mtScreening-observation</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/mtScreening-observation</td>
 <td>The Observation to use when exposing screening data</td>
 </tr>
 <tr>
-<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/main/StructureDefinition-mtSlot.html'>mtSlot</a></td>
+<td><a href='http://build.fhir.org/ig/HL7NZ/medtech/branches/master/StructureDefinition-mtSlot.html'>mtSlot</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MtSlot</td>
 <td>The Slot resource exposed by the ALEX infrastructure.</td>
 </tr>
