@@ -55,7 +55,7 @@ Description:    "The MedicationRequest resource exposed by the ALEX infrastructu
 * detectedIssue 0..0
 * eventHistory 0..0
 
-* status ^definition = "This is either active or stopped. Stopped is the equivalent of 'inactive' in medtech"
+* status ^short = "This is either active or stopped. Stopped is the equivalent of 'inactive' in medtech"
 
 * extension contains
     $ltm named nzeps-long-term-medication 0..1 

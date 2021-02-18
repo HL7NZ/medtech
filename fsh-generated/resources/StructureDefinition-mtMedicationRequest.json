@@ -104,7 +104,7 @@
       {
         "id": "MedicationRequest.status",
         "path": "MedicationRequest.status",
-        "definition": "This is either active or stopped. Stopped is the equivalent of 'inactive' in medtech"
+        "short": "This is either active or stopped. Stopped is the equivalent of 'inactive' in medtech"
       },
       {
         "id": "MedicationRequest.statusReason",
