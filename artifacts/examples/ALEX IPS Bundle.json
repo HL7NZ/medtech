@@ -1,0 +1,705 @@
+{
+    "resourceType": "Bundle",
+    "id": "a8a4a3d5-2e52-4f60-8ae8-45509c1ba637",
+    "meta": {
+        "lastUpdated": "2021-03-02T21:40:43.0915085+00:00"
+    },
+    "type": "document",
+    "link": [
+        {
+            "relation": "self",
+            "url": "https://alexapitest.medtechglobal.com/fhir/Patient/$summary?identifier=https://standards.digital.health.nz/ns/nhi-id|AAA7777"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/Composition/37733b36-6bd1-4da3-95b1-427250df8dac",
+            "resource": {
+                "resourceType": "Composition",
+                "id": "37733b36-6bd1-4da3-95b1-427250df8dac",
+                "text": {
+                    "status": "generated"
+                },
+                "identifier": {
+                    "system": "urn:oid:2.16.724.4.8.10.200.10",
+                    "value": "46c603e8-2c7f-43da-9992-f22205ed7c94"
+                },
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "60591-5",
+                            "display": "Patient Summary Document"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D"
+                },
+                "date": "2021-03-02T21:40:43+00:00",
+                "author": [
+                    {
+                        "reference": "Device/ALEX",
+                        "display": "Application Exchange Layer"
+                    }
+                ],
+                "title": "Patient Summary as of Mar 02, 2021 21:40",
+                "confidentiality": "U",
+                "section": [
+                    {
+                        "title": "Active Problems",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "11450-4",
+                                    "display": "Problem list Reported"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "Condition/BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjB8IspnJ1NFTxvxUItuU5Tw%3D%3D"
+                            },
+                            {
+                                "reference": "Condition/BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjXSrU2JFXc1NE7WkE7ckWWw%3D%3D"
+                            },
+                            {
+                                "reference": "Condition/BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjOcbWGCOPq1Q%219qbQmoMUsA%3D%3D"
+                            },
+                            {
+                                "reference": "Condition/BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjKQfw0NkQ3y8SEwbYef8KRw%3D%3D"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Medication",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "10160-0",
+                                    "display": "History of Medication use Narrative"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "MedicationStatment/%21T-Y3MyCJ8jjnNVHBGZFvpYxrM5dE41nqwUUY%21NgE9hB9wgalOgGggGn3hF5SFMbjVR-mfjCn2p87JqE7UCXaA%3D%3D"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Allergies and Intolerances",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "48765-2",
+                                    "display": "Allergies and adverse reactions Document"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "AllergyIntolerance/2ee8eb7b-977e-40f8-ad32-38c771f6cc6d"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Document Reference Consultation Notes",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "11488-4",
+                                    "display": "Consult note"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "DocumentReference/BbvPIR04S5Wp9bFlFa%21LKXZ7mC9Lz2hQr81MjhvvPJZCfF8fpR%216jlZic82ghaPGalRp6b1PbPsV7gWbzhcSLr8Tmal98s8q0msZH1Ojyeo%3D"
+                            },
+                            {
+                                "reference": "DocumentReference/BbvPIR04S5Wp9bFlFa%21LKXZ7mC9Lz2hQr81MjhvvPJZCfF8fpR%216jlZic82ghaPGeWMnztUOlPEcL2JzDkl8uUrn9GHDG3ktCMSHRtZs%2120%3D"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+                "meta": {
+                    "versionId": "4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+                    "lastUpdated": "2021-02-25T13:13:33+00:00"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "urn:oid:2.16.840.1.113883.2.18.2",
+                        "value": "AAA7777"
+                    }
+                ],
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "FHIR",
+                        "given": [
+                            "DUMMY"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1992-06-22",
+                "address": [
+                    {
+                        "type": "physical",
+                        "line": [
+                            "2/41 Maungarei Road",
+                            "Remeura"
+                        ],
+                        "city": "Auckland",
+                        "postalCode": "1050"
+                    },
+                    {
+                        "type": "postal",
+                        "line": [
+                            "2/41 Maungarei Road",
+                            "Remeura"
+                        ],
+                        "city": "Auckland",
+                        "postalCode": "1050"
+                    }
+                ],
+                "generalPractitioner": [
+                    {
+                        "reference": "Practitioner/WfvuvWkVnK1EziSUxELsNp2M4LtVbXHTvFY3A6Wqnd7qJQx2FejLBsxh2IIjIs0Iu9E5Cm7BYpjQlFRanZqpbQ%3D%3D",
+                        "display": "Salini Menon"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/Location/xTHvQgRpnj-RrQGFaNfsTlZiNhJmP1Qr69oSFPFo9!5Y3il3RaKRIvzxIVw-MVCY2wcycbVc!iOh4m1Z8zS-6unxF84cvifwE6z9qK52lWfFzHP1zSWk6UdnN-nKjCmVh9Dony2c1V9OQwuAO0-ob1HVSAeeRlXD9rN70J29amN6Wfxjc!sptIWpkJAoM7rTDprVce0wkN2WH9gcjcOkgA%3D%3D",
+            "resource": {
+                "resourceType": "Location",
+                "id": "xTHvQgRpnj-RrQGFaNfsTlZiNhJmP1Qr69oSFPFo9%215Y3il3RaKRIvzxIVw-MVCY2wcycbVc%21iOh4m1Z8zS-6unxF84cvifwE6z9qK52lWfFzHP1zSWk6UdnN-nKjCmVh9Dony2c1V9OQwuAO0-ob1HVSAeeRlXD9rN70J29amN6Wfxjc%21sptIWpkJAoM7rTDprVce0wkN2WH9gcjcOkgA%3D%3D",
+                "meta": {
+                    "versionId": "xTHvQgRpnj-RrQGFaNfsTlZiNhJmP1Qr69oSFPFo9%215Y3il3RaKRIvzxIVw-MVCY2wcycbVc%21iOh4m1Z8zS-6unxF84cvifwE6z9qK52lWfFzHP1zSWk6UdnN-nKjCmVh9Dony2c1V9OQwuAO0-ob1HVSAeeRlXD9rN70J29amN6Wfxjc%21sptIWpkJAoM7rTDprVce0wkN2WH9gcjcOkgA%3D%3D",
+                    "lastUpdated": "2021-02-18T14:30:12+00:00"
+                },
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "https://standards.digital.health.nz/ns/hpi-facility-id",
+                        "value": "F2N060-E"
+                    }
+                ],
+                "name": "Medtech Family & Health Practice",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "08006338",
+                        "use": "work"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/Condition/BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjB8IspnJ1NFTxvxUItuU5Tw%3D%3D",
+            "resource": {
+                "resourceType": "Condition",
+                "id": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjB8IspnJ1NFTxvxUItuU5Tw%3D%3D",
+                "meta": {
+                    "versionId": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjB8IspnJ1NFTxvxUItuU5Tw%3D%3D",
+                    "lastUpdated": "2021-02-25T14:29:46+00:00",
+                    "security": [
+                        {
+                            "system": "https://www.hl7.org/fhir/v3/Confidentiality/cs.html",
+                            "code": "R",
+                            "display": "restricted"
+                        }
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/hspc-updated",
+                        "valueInstant": "2021-02-25T14:29:46+00:00"
+                    },
+                    {
+                        "url": "hightlight",
+                        "valueBoolean": true
+                    },
+                    {
+                        "url": "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition",
+                        "valueBoolean": true
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "EHRKey",
+                        "value": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjB8IspnJ1NFTxvxUItuU5Tw%3D%3D"
+                    }
+                ],
+                "clinicalStatus": {
+                    "text": "Active"
+                },
+                "verificationStatus": {
+                    "text": "confirmed"
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://health.govt.nz/read-codes",
+                            "code": "12D4.00",
+                            "display": "FH: Hay fever"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+                    "display": "Dummy Fhir "
+                },
+                "onsetDateTime": "2021-02-11T00:00:00+00:00",
+                "recordedDate": "2021-02-25T12:46:36+00:00",
+                "recorder": {
+                    "reference": "Practitioner/WfvuvWkVnK1EziSUxELsNp2M4LtVbXHTvFY3A6Wqnd7qJQx2FejLBsxh2IIjIs0IMMQ%21FqXZ-Ig4Gwj4G0Fxkg%3D%3D",
+                    "display": "Dr Oliver Queen"
+                },
+                "note": [
+                    {
+                        "text": "Ticked LT, HT, CONFIDENTIAL, Severity = Mild , COnfirmed, Date OnSet = 11/02/2021$$$$^^ Las"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/Condition/BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjXSrU2JFXc1NE7WkE7ckWWw%3D%3D",
+            "resource": {
+                "resourceType": "Condition",
+                "id": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjXSrU2JFXc1NE7WkE7ckWWw%3D%3D",
+                "meta": {
+                    "versionId": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjXSrU2JFXc1NE7WkE7ckWWw%3D%3D",
+                    "lastUpdated": "2021-02-25T14:42:03+00:00",
+                    "security": [
+                        {
+                            "system": "https://www.hl7.org/fhir/v3/Confidentiality/cs.html",
+                            "code": "U",
+                            "display": "unrestricted"
+                        }
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/hspc-updated",
+                        "valueInstant": "2021-02-25T14:42:03+00:00"
+                    },
+                    {
+                        "url": "hightlight",
+                        "valueBoolean": false
+                    },
+                    {
+                        "url": "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition",
+                        "valueBoolean": false
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "EHRKey",
+                        "value": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjXSrU2JFXc1NE7WkE7ckWWw%3D%3D"
+                    }
+                ],
+                "clinicalStatus": {
+                    "text": "Active"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://health.govt.nz/read-codes",
+                            "code": "2E.11",
+                            "display": "O/E - fever"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+                    "display": "Dummy Fhir "
+                },
+                "onsetDateTime": "2021-02-11T00:00:00+00:00",
+                "recordedDate": "2021-02-25T14:40:27+00:00",
+                "recorder": {
+                    "reference": "Practitioner/WfvuvWkVnK1EziSUxELsNp2M4LtVbXHTvFY3A6Wqnd7qJQx2FejLBsxh2IIjIs0IMMQ%21FqXZ-Ig4Gwj4G0Fxkg%3D%3D",
+                    "display": "Dr Oliver Queen"
+                },
+                "note": [
+                    {
+                        "text": "Test"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/Condition/BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjOcbWGCOPq1Q!9qbQmoMUsA%3D%3D",
+            "resource": {
+                "resourceType": "Condition",
+                "id": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjOcbWGCOPq1Q%219qbQmoMUsA%3D%3D",
+                "meta": {
+                    "versionId": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjOcbWGCOPq1Q%219qbQmoMUsA%3D%3D",
+                    "lastUpdated": "2021-02-25T14:42:03+00:00",
+                    "security": [
+                        {
+                            "system": "https://www.hl7.org/fhir/v3/Confidentiality/cs.html",
+                            "code": "U",
+                            "display": "unrestricted"
+                        }
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/hspc-updated",
+                        "valueInstant": "2021-02-25T14:42:03+00:00"
+                    },
+                    {
+                        "url": "hightlight",
+                        "valueBoolean": false
+                    },
+                    {
+                        "url": "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition",
+                        "valueBoolean": false
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "EHRKey",
+                        "value": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjOcbWGCOPq1Q%219qbQmoMUsA%3D%3D"
+                    }
+                ],
+                "clinicalStatus": {
+                    "text": "Active"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://health.govt.nz/read-codes",
+                            "code": "2E.11",
+                            "display": "O/E - fever"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+                    "display": "Dummy Fhir "
+                },
+                "onsetDateTime": "2021-02-11T00:00:00+00:00",
+                "recordedDate": "2021-02-25T14:42:03+00:00",
+                "recorder": {
+                    "reference": "Practitioner/WfvuvWkVnK1EziSUxELsNp2M4LtVbXHTvFY3A6Wqnd7qJQx2FejLBsxh2IIjIs0IMMQ%21FqXZ-Ig4Gwj4G0Fxkg%3D%3D",
+                    "display": "Dr Oliver Queen"
+                },
+                "note": [
+                    {
+                        "text": "Test"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/Condition/BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjKQfw0NkQ3y8SEwbYef8KRw%3D%3D",
+            "resource": {
+                "resourceType": "Condition",
+                "id": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjKQfw0NkQ3y8SEwbYef8KRw%3D%3D",
+                "meta": {
+                    "versionId": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjKQfw0NkQ3y8SEwbYef8KRw%3D%3D",
+                    "lastUpdated": "2021-02-25T14:42:45+00:00",
+                    "security": [
+                        {
+                            "system": "https://www.hl7.org/fhir/v3/Confidentiality/cs.html",
+                            "code": "U",
+                            "display": "unrestricted"
+                        }
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/hspc-updated",
+                        "valueInstant": "2021-02-25T14:42:45+00:00"
+                    },
+                    {
+                        "url": "hightlight",
+                        "valueBoolean": false
+                    },
+                    {
+                        "url": "http://hl7.org.nz/fhir/StructureDefinition/long-term-condition",
+                        "valueBoolean": false
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "EHRKey",
+                        "value": "BDqGUXyCuGQqUODVnG1cknlLUGMTExXQPx4Fi2eac3Q6d1CMvonM4YMhbQ-gF3NjKQfw0NkQ3y8SEwbYef8KRw%3D%3D"
+                    }
+                ],
+                "clinicalStatus": {
+                    "text": "Active"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://health.govt.nz/read-codes",
+                            "code": "S50.00",
+                            "display": "Sprain shoulder/upper arm"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+                    "display": "Dummy Fhir "
+                },
+                "recordedDate": "2021-02-25T14:42:45+00:00",
+                "recorder": {
+                    "reference": "Practitioner/WfvuvWkVnK1EziSUxELsNp2M4LtVbXHTvFY3A6Wqnd7qJQx2FejLBsxh2IIjIs0IMMQ%21FqXZ-Ig4Gwj4G0Fxkg%3D%3D",
+                    "display": "Dr Oliver Queen"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/MedicationStatement/!T-Y3MyCJ8jjnNVHBGZFvpYxrM5dE41nqwUUY!NgE9hB9wgalOgGggGn3hF5SFMbjVR-mfjCn2p87JqE7UCXaA%3D%3D",
+            "resource": {
+                "resourceType": "MedicationStatement",
+                "id": "%21T-Y3MyCJ8jjnNVHBGZFvpYxrM5dE41nqwUUY%21NgE9hB9wgalOgGggGn3hF5SFMbjVR-mfjCn2p87JqE7UCXaA%3D%3D",
+                "meta": {
+                    "versionId": "%21T-Y3MyCJ8jjnNVHBGZFvpYxrM5dE41nqwUUY%21NgE9hB9wgalOgGggGn3hF5SFMbjVR-mfjCn2p87JqE7UCXaA%3D%3D",
+                    "lastUpdated": "2021-03-02T09:15:46+00:00",
+                    "security": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                            "code": "U",
+                            "display": "unrestricted"
+                        }
+                    ]
+                },
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "EHRKey",
+                        "value": "%21T-Y3MyCJ8jjnNVHBGZFvpYxrM5dE41nqwUUY%21NgE9hB9wgalOgGggGn3hF5SFMbjVR-mfjCn2p87JqE7UCXaA%3D%3D"
+                    }
+                ],
+                "status": "active",
+                "medicationCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "NZULM MPUU – 2.16.840.1.113883.2.18.26.2",
+                            "code": "10037311000116101",
+                            "display": "PARACETAMOL - 500mg Tab"
+                        }
+                    ],
+                    "text": "PARACETAMOL - 500mg Tab"
+                },
+                "subject": {
+                    "reference": "Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D"
+                },
+                "dateAsserted": "2021-03-02T09:15:46+00:00",
+                "informationSource": {
+                    "reference": "Practitioner/WfvuvWkVnK1EziSUxELsNp2M4LtVbXHTvFY3A6Wqnd7qJQx2FejLBsxh2IIjIs0IMMQ%21FqXZ-Ig4Gwj4G0Fxkg%3D%3D"
+                },
+                "dosage": [
+                    {
+                        "text": "2 tabs, Three Times Daily, 2 weeks",
+                        "timing": {
+                            "repeat": {
+                                "frequency": 0
+                            }
+                        },
+                        "doseAndRate": [
+                            {
+                                "doseQuantity": {
+                                    "value": 84
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/AllergyIntolerance/2ee8eb7b-977e-40f8-ad32-38c771f6cc6d",
+            "resource": {
+                "resourceType": "AllergyIntolerance",
+                "id": "2ee8eb7b-977e-40f8-ad32-38c771f6cc6d",
+                "meta": {
+                    "lastUpdated": "2021-03-02T21:40:43.059+00:00"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                            "code": "resolved"
+                        }
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+                            "code": "no-allergy-info",
+                            "display": "No information about allergies"
+                        }
+                    ],
+                    "text": "There is no information available regarding the subject's allergy conditions"
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/DocumentReference/BbvPIR04S5Wp9bFlFa!LKXZ7mC9Lz2hQr81MjhvvPJZCfF8fpR!6jlZic82ghaPGalRp6b1PbPsV7gWbzhcSLr8Tmal98s8q0msZH1Ojyeo%3D",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "id": "BbvPIR04S5Wp9bFlFa%21LKXZ7mC9Lz2hQr81MjhvvPJZCfF8fpR%216jlZic82ghaPGalRp6b1PbPsV7gWbzhcSLr8Tmal98s8q0msZH1Ojyeo%3D",
+                "meta": {
+                    "versionId": "BbvPIR04S5Wp9bFlFa%21LKXZ7mC9Lz2hQr81MjhvvPJZCfF8fpR%216jlZic82ghaPGalRp6b1PbPsV7gWbzhcSLr8Tmal98s8q0msZH1Ojyeo%3D",
+                    "lastUpdated": "2021-02-25T14:44:18+00:00"
+                },
+                "status": "current",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "11488-4",
+                            "display": "Consult Note"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+                    "display": "Dummy Fhir "
+                },
+                "author": [
+                    {
+                        "reference": "Practitioner/WfvuvWkVnK1EziSUxELsNp2M4LtVbXHTvFY3A6Wqnd7qJQx2FejLBsxh2IIjIs0IMMQ%21FqXZ-Ig4Gwj4G0Fxkg%3D%3D",
+                        "display": "Dr Oliver Queen"
+                    }
+                ],
+                "content": [
+                    {
+                        "attachment": {
+                            "contentType": "text/plain",
+                            "data": "e1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcZGVmZjBcZGVmbGFuZzUxMjl7XGZvbnR0Ymx7XGYwXGZuaWxcZmNoYXJzZXQwIFRhaG9tYTt9fQ0Ke1xjb2xvcnRibCA7XHJlZDBcZ3JlZW4wXGJsdWUwO30NClx2aWV3a2luZDRcdWMxXHBhcmRcdHgzMFx0eDQ1XHR4MzBcdHg3NVx0eDEwNVxjZjFcZjBcZnMxNiBzcHJhaW5cY2YwXGZzMTdccGFyDQp9DQo="
+                        },
+                        "format": {
+                            "system": "http://loinc.org",
+                            "code": "61150-9",
+                            "display": "Subjective Narrative"
+                        }
+                    }
+                ],
+                "context": {
+                    "period": {
+                        "start": "2021-02-23T10:57:18+00:00"
+                    }
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://alexapitest.medtechglobal.com/fhir/DocumentReference/BbvPIR04S5Wp9bFlFa!LKXZ7mC9Lz2hQr81MjhvvPJZCfF8fpR!6jlZic82ghaPGeWMnztUOlPEcL2JzDkl8uUrn9GHDG3ktCMSHRtZs!20%3D",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "id": "BbvPIR04S5Wp9bFlFa%21LKXZ7mC9Lz2hQr81MjhvvPJZCfF8fpR%216jlZic82ghaPGeWMnztUOlPEcL2JzDkl8uUrn9GHDG3ktCMSHRtZs%2120%3D",
+                "meta": {
+                    "versionId": "BbvPIR04S5Wp9bFlFa%21LKXZ7mC9Lz2hQr81MjhvvPJZCfF8fpR%216jlZic82ghaPGeWMnztUOlPEcL2JzDkl8uUrn9GHDG3ktCMSHRtZs%2120%3D",
+                    "lastUpdated": "2021-03-02T09:20:24+00:00"
+                },
+                "status": "current",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "11488-4",
+                            "display": "Consult Note"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/4h-wWeA2EjPuGNCv11aVXWdHuw8j9NvhfQN9GBnO7rXuQx4XiWy9XDiM--kJiXtnBEtC7o475yXOrHCig3n7cQ%3D%3D",
+                    "display": "Dummy Fhir "
+                },
+                "author": [
+                    {
+                        "reference": "Practitioner/WfvuvWkVnK1EziSUxELsNp2M4LtVbXHTvFY3A6Wqnd7qJQx2FejLBsxh2IIjIs0IMMQ%21FqXZ-Ig4Gwj4G0Fxkg%3D%3D",
+                        "display": "Dr Oliver Queen"
+                    }
+                ],
+                "context": {
+                    "period": {
+                        "start": "2021-03-02T09:15:24+00:00"
+                    }
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}
+ 
